@@ -26,6 +26,14 @@
         <activity
             android:name=".LoginActivity">
         </activity>
+
+        <activity
+            android:name=".HomePageActivity">
+        </activity>
+
+        <activity
+            android:name=".ProfileUser">
+        </activity>
     </application>
 
 </manifest>
