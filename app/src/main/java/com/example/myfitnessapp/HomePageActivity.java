@@ -22,6 +22,9 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
 
         profileButton = (Button) findViewById(R.id.button8);
         profileButton.setOnClickListener(this);
+
+        foodButton = (Button) findViewById(R.id.button9);
+        foodButton.setOnClickListener(this);
     }
 
     @Override
@@ -31,6 +34,8 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
                 startActivity(new Intent(HomePageActivity.this, MainActivity.class ));
             case R.id.button8:
                 startActivity(new Intent(HomePageActivity.this, ProfileUser.class));
+            case R.id.button9:
+                startActivity(new Intent(HomePageActivity.this, AddFood.class));
         }
     }
 }
