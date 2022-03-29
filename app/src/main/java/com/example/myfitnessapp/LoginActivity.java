@@ -49,6 +49,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.button4:
                 startActivity(new Intent(this, MainActivity.class));
+                break;
         }
     }
 

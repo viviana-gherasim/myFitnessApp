@@ -37,7 +37,10 @@
 
         <activity
             android:name=".AddFood">
+        </activity>
 
+        <activity
+            android:name=".FoodActivity">
         </activity>
     </application>
 

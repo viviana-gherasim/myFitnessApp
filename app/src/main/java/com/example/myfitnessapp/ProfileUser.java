@@ -78,6 +78,7 @@ public class ProfileUser extends AppCompatActivity implements View.OnClickListen
         switch (v.getId()) {
             case R.id.button12:
                 startActivity(new Intent(ProfileUser.this, HomePageActivity.class));
+                break;
         }
     }
 }

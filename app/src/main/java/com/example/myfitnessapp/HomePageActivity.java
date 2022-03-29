@@ -32,10 +32,13 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
         switch (v.getId()) {
             case R.id.button11:
                 startActivity(new Intent(HomePageActivity.this, MainActivity.class ));
+                break;
             case R.id.button8:
                 startActivity(new Intent(HomePageActivity.this, ProfileUser.class));
+                break;
             case R.id.button9:
-                startActivity(new Intent(HomePageActivity.this, AddFood.class));
+                startActivity(new Intent(HomePageActivity.this, FoodActivity.class));
+                break;
         }
     }
 }

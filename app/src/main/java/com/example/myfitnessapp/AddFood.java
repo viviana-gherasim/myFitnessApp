@@ -52,6 +52,9 @@ public class AddFood extends AppCompatActivity implements View.OnClickListener {
             case R.id.button13:
                 addFoodToDatabase();
                 break;
+            case R.id.backButton:
+                startActivity(new Intent(this, FoodActivity.class));
+                break;
         }
     }
 
