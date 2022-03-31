@@ -1,6 +1,7 @@
 package com.example.myfitnessapp;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,7 +22,7 @@ public class AddFood extends AppCompatActivity implements View.OnClickListener {
 
     private Button add;
     private EditText food, brand, barcode, calories, proteins, carbs, fats;
-    private ImageView back;
+    private ImageView back, scanner;
     private DatabaseReference database;
 
     @Override
@@ -35,6 +36,9 @@ public class AddFood extends AppCompatActivity implements View.OnClickListener {
         back = (ImageView) findViewById(R.id.backButton);
         back.setOnClickListener(this);
 
+        scanner = (ImageView) findViewById(R.id.imageView);
+        scanner.setOnClickListener(this);
+
         database = FirebaseDatabase.getInstance("https://my-fitness-app-aa2ef-default-rtdb.europe-west1.firebasedatabase.app").getReference().child("Food");
 
         food = (EditText) findViewById(R.id.editTextTextFoodName);
@@ -44,6 +48,15 @@ public class AddFood extends AppCompatActivity implements View.OnClickListener {
         proteins = (EditText) findViewById(R.id.editTextNumber9);
         carbs = (EditText) findViewById(R.id.editTextNumber10);
         fats = (EditText) findViewById(R.id.editTextNumber11);
+
+        String codBareS;
+        Bundle bundle = getIntent().getExtras();
+        if(bundle!=null) {
+            codBareS = bundle.getString("Camera");
+            if(codBareS!=null) {
+                barcode.setText(codBareS);
+            }
+        }
     }
 
     @Override
@@ -54,6 +67,9 @@ public class AddFood extends AppCompatActivity implements View.OnClickListener {
                 break;
             case R.id.backButton:
                 startActivity(new Intent(this, FoodActivity.class));
+                break;
+            case R.id.imageView:
+                startActivity(new Intent(this, ScannerActivity.class));
                 break;
         }
     }
