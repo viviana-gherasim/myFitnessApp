@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">myFitnessApp</string>
+
+    <string-array name="array_food_categories">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Snacks</item>
+    </string-array>
 </resources>

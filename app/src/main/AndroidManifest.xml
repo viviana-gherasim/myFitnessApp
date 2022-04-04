@@ -51,6 +51,26 @@
             android:name=".ScannerActivity">
         </activity>
 
+        <activity
+            android:name=".DiaryActivity">
+        </activity>
+
+        <activity
+            android:name=".SearchFoodActivity">
+        </activity>
+
+        <activity
+            android:name=".SearchFoodName">
+        </activity>
+
+        <activity
+            android:name=".SearchFoodBarcode">
+        </activity>
+
+        <activity
+            android:name=".ScannerDiaryActivity">
+        </activity>
+
     </application>
 
 </manifest>
