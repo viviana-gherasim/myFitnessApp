@@ -28,6 +28,9 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
 
         diaryButton = (Button) findViewById(R.id.button7);
         diaryButton.setOnClickListener(this);
+
+        historyButton = (Button) findViewById(R.id.button10);
+        historyButton.setOnClickListener(this);
     }
 
     @Override
@@ -44,6 +47,10 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.button7:
                 startActivity(new Intent(HomePageActivity.this, DiaryActivity.class));
+                break;
+            case R.id.button10:
+                startActivity(new Intent(HomePageActivity.this, Calendar.class));
+                break;
         }
     }
 }

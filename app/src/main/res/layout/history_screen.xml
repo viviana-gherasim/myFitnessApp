@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ViewHistory">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent">
+
+                            <ImageView
+                                android:id="@+id/backToHomeButtonHistory"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/back"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="View History"
+                                android:textSize="30sp"
+                                android:layout_marginLeft="20dp"/>
+
+                        </TableRow>
+
+                    </TableLayout>
+
+            </TableRow>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <TextView
+                        android:id="@+id/textViewTargetHistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:textSize="20dp"
+                        android:text="Target:" />
+
+                    <TextView
+                        android:id="@+id/textTargetCaloriiHistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Target calorii"
+                        android:textSize="20dp"/>
+
+                    <TextView
+                        android:id="@+id/textViewSumHistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="Sum:"
+                        android:textSize="20dp"/>
+
+                    <TextView
+                        android:id="@+id/textSumCaloriiHistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sum calorii"
+                        android:textSize="20dp"/>
+
+                </TableRow>
+            </TableLayout>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="700dp">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ListView
+                    android:id="@+id/foodHistoryListView"
+                    android:layout_width="wrap_content"
+                    tools:listitem="@layout/adapter_history_view"/>
+            </TableRow>
+
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</ScrollView>
