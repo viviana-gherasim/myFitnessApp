@@ -68,7 +68,7 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.back:
+            case R.id.backButtonHistory:
                 startActivity(new Intent(this, HomePageActivity.class));
                 break;
         }

@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HomePageActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button logout, diaryButton, profileButton, foodButton, historyButton;
+    private Button logout, diaryButton, profileButton, foodButton, historyButton, trainingButton;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,6 +31,9 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
 
         historyButton = (Button) findViewById(R.id.button10);
         historyButton.setOnClickListener(this);
+
+        trainingButton = (Button) findViewById(R.id.button16);
+        trainingButton.setOnClickListener(this);
     }
 
     @Override
@@ -51,6 +54,10 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
             case R.id.button10:
                 startActivity(new Intent(HomePageActivity.this, Calendar.class));
                 break;
+            case R.id.button16:
+                startActivity(new Intent(HomePageActivity.this, TrainingActivity.class));
+                break;
+
         }
     }
 }

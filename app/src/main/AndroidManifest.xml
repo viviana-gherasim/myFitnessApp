@@ -79,6 +79,26 @@
             android:name=".ViewHistory">
         </activity>
 
+        <activity
+            android:name=".TrainingActivity">
+        </activity>
+
+        <activity
+            android:name=".BeginnerTraining">
+        </activity>
+
+        <activity
+            android:name=".AdvancedTraining">
+        </activity>
+
+        <activity
+            android:name=".ExerciseBeginner">
+        </activity>
+
+        <activity
+            android:name=".ExerciseAdvanced">
+        </activity>
+
     </application>
 
 </manifest>
