@@ -64,9 +64,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private void registerUser() {
         String email =editTextEmail.getText().toString().trim();
         String password=editTextPassword.getText().toString().trim();
-        String height=editTextHeight.getText().toString().trim();
-        String weight=editTextWeight.getText().toString().trim();
-        String tWeight=editTextTargetWeight.getText().toString().trim();
+        Long height=Long.parseLong(editTextHeight.getText().toString().trim());
+        Long weight=Long.parseLong(editTextWeight.getText().toString().trim());
+        Long tWeight=Long.parseLong(editTextTargetWeight.getText().toString().trim());
         String day=daySpinner.getText().toString().trim();
         String month=monthSpinner.getText().toString().trim();
         String year=yearSpinner.getText().toString().trim();
@@ -97,17 +97,17 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             return;
         }
 
-        if(height.isEmpty()){
+        if(editTextHeight.getText().length() == 0){
             editTextHeight.setError("Height is required!");
             editTextHeight.requestFocus();
             return;
         }
-        if(weight.isEmpty()){
+        if(editTextWeight.getText().length() == 0){
             editTextWeight.setError("Weight is required!");
             editTextWeight.requestFocus();
             return;
         }
-        if(tWeight.isEmpty()){
+        if(editTextTargetWeight.getText().length() == 0){
             editTextTargetWeight.setError("Target weight is required!");
             editTextTargetWeight.requestFocus();
             return;

@@ -101,8 +101,8 @@ public class ViewHistory extends AppCompatActivity implements View.OnClickListen
                             double BMR;
                             java.util.Calendar calendar= java.util.Calendar.getInstance(TimeZone.getDefault());
                             int year=calendar.get(Calendar.YEAR);
-                            int iInaltime=Integer.parseInt(userApp.getHeight());
-                            int iGreutate=Integer.parseInt(userApp.getWeight());
+                            int iInaltime=Integer.parseInt(String.valueOf(userApp.getHeight()));
+                            int iGreutate=Integer.parseInt(String.valueOf(userApp.getWeight()));
                             int iVarsta=year - Integer.parseInt(userApp.getYear());
                             BMR=88.362+(13.397*iGreutate)+(4.799*iInaltime)+(5.677*iVarsta);
                             double caloriiTarget=BMR*1.2;

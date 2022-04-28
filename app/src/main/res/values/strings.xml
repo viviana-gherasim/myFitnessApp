@@ -183,4 +183,23 @@
         Step 3: Return to the starting position and repeat with the left leg. \n\n
         Step 4: Keep alternating legs until the set is complete.
     </string>
+
+
+    <string-array name="title_nutrition_and_tips">
+        <item>Just keep moving</item>
+        <item>Build for muscles</item>
+        <item>Make one meal a day vegan</item>
+        <item>Go green</item>
+        <item>Replace coffee with tea</item>
+        <item>Do yoga</item>
+    </string-array>
+
+    <string-array name="details_nutrition_and_tips">
+        <item>moving details</item>
+        <item>building muscles</item>
+        <item>meal change</item>
+        <item>green all the way</item>
+        <item>coffee replacement</item>
+        <item>yoga practicing</item>
+    </string-array>
 </resources>

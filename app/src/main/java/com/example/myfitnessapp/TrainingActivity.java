@@ -43,7 +43,7 @@ public class TrainingActivity extends AppCompatActivity implements View.OnClickL
 
     public void nutrition(View view) {
 
-        Intent intent = new Intent(TrainingActivity.this, Nutrition.class);
+        Intent intent = new Intent(TrainingActivity.this, NutritionActivity.class);
         startActivity(intent);
 
     }

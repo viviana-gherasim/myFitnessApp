@@ -161,8 +161,8 @@ public class DiaryActivity extends AppCompatActivity implements View.OnClickList
                             double BMR;
                             Calendar calendar = Calendar.getInstance(TimeZone.getDefault());
                             int year = calendar.get(Calendar.YEAR);
-                            int greutate = Integer.parseInt(userApp.getWeight());
-                            int inaltime = Integer.parseInt(userApp.getHeight());
+                            int greutate = Integer.parseInt(String.valueOf(userApp.getWeight()));
+                            int inaltime = Integer.parseInt(String.valueOf(userApp.getHeight()));
                             int varsta = year - Integer.parseInt(userApp.getYear());
                             BMR = 88.362 + (13.397 * greutate) + (4.799 * inaltime) + (5.677 * varsta);
                             double caloriiTarget = BMR * 1.2;

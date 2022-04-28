@@ -41,6 +41,9 @@
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/history_screen.xml" value="0.21422101449275363" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/home_page.xml" value="0.264" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/login.xml" value="0.264" />
+        <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/nutrition_and_tips.xml" value="0.20969202898550723" />
+        <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/nutrition_row.xml" value="0.22871046228710462" />
+        <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/nutrition_tips_details.xml" value="0.20969202898550723" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/pick_date.xml" value="0.264" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/profile.xml" value="0.264" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/register.xml" value="0.264" />
@@ -51,6 +54,7 @@
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/search_food_by_name.xml" value="0.264" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/training1.xml" value="0.2" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/training_ideas.xml" value="0.2" />
+        <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/update_profile.xml" value="0.264" />
       </map>
     </option>
   </component>

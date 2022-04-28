@@ -12,7 +12,7 @@
         android:layout_height="115dp"
         android:layout_marginStart="119dp"
         android:layout_marginBottom="35dp"
-        android:src="@drawable/dumbbell"
+        android:src="@drawable/logo"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress2"
         app:layout_constraintStart_toStartOf="parent" />
 

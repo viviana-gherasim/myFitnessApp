@@ -11,7 +11,7 @@
         android:id="@+id/button12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
+        android:layout_marginStart="84dp"
         android:layout_marginBottom="164dp"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -111,12 +111,12 @@
         app:layout_constraintBottom_toTopOf="@+id/textView21"
         app:layout_constraintStart_toEndOf="@+id/textView15" />
 
-    <TextView
+    <EditText
         android:id="@+id/textView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="82dp"
-        android:layout_marginBottom="35dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="36dp"
         android:inputType="number"
         android:text="TextView"
         android:textSize="18dp"
@@ -124,7 +124,7 @@
         app:layout_constraintBottom_toTopOf="@+id/textView22"
         app:layout_constraintStart_toEndOf="@+id/textView16" />
 
-    <TextView
+    <EditText
         android:id="@+id/textView22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -193,4 +193,14 @@
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/textView23"
         app:layout_constraintStart_toEndOf="@+id/textView26" />
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="164dp"
+        android:text="Update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button12" />
 </androidx.constraintlayout.widget.ConstraintLayout>

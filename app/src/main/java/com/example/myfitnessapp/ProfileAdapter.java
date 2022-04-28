@@ -26,9 +26,9 @@ public class ProfileAdapter  extends ArrayAdapter<User> {
     @NonNull
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         String email = getItem(position).getEmail();
-        String weight = getItem(position).getWeight();
-        String height = getItem(position).getHeight();
-        String targetWeight = getItem(position).getTargetWeight();
+        Long weight = Long.valueOf(getItem(position).getWeight());
+        Long height = Long.valueOf(getItem(position).getHeight());
+        Long targetWeight = Long.valueOf(getItem(position).getTargetWeight());
         String day = getItem(position).getDay();
         String month = getItem(position).getMonth();
         String year = getItem(position).getYear();
@@ -45,9 +45,9 @@ public class ProfileAdapter  extends ArrayAdapter<User> {
         TextView tYear = (TextView) convertView.findViewById(R.id.textView27);
 
         tEmail.setText(email);
-        tWeight.setText(weight);
-        tHeight.setText(height);
-        tTargetWeight.setText(targetWeight);
+        tWeight.setText(String.valueOf(weight));
+        tHeight.setText(String.valueOf(height));
+        tTargetWeight.setText(String.valueOf(targetWeight));
         tDay.setText(day);
         tMonth.setText(month);
         tYear.setText(year);

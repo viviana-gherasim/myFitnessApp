@@ -99,6 +99,14 @@
             android:name=".ExerciseAdvanced">
         </activity>
 
+        <activity
+            android:name=".NutritionActivity">
+        </activity>
+
+        <activity
+            android:name=".NutritionDetails">
+        </activity>
+
     </application>
 
 </manifest>
