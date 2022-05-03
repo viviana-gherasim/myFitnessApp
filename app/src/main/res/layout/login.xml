@@ -75,7 +75,7 @@
         android:layout_width="277dp"
         android:layout_height="44dp"
         android:layout_marginStart="64dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/round_button"
         android:text="Register"
         android:textColor="#FFFFFF "
@@ -96,5 +96,15 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="315dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="29dp"
+        app:layout_constraintStart_toStartOf="@+id/topView"
+        app:layout_constraintTop_toTopOf="@+id/topView"
+        app:srcCompat="@drawable/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

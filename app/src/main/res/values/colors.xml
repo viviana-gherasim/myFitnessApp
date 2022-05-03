@@ -11,5 +11,11 @@
     <color name="colorPrimary">#3a8dba</color>
     <color name="waveColor">#c7e4f0</color>
 
+    <color name="profileColor">#6CB4EE</color>
+    <color name="foodColor">#2a52be</color>
+    <color name="diaryColor">#6495ED</color>
+    <color name="calendarColor">#B9D9EB</color>
+    <color name="trainingColor">#6699CC</color>
+
 
 </resources>

@@ -4,57 +4,59 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class HomePageActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button logout, diaryButton, profileButton, foodButton, historyButton, trainingButton;
+    private RelativeLayout profileHome, foodHome, diaryHome, calendarHome, trainingHome;
+    private Button logout;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_page);
 
-        logout = (Button) findViewById(R.id.button11);
+        logout = (Button) findViewById(R.id.logout);
         logout.setOnClickListener(this);
 
-        profileButton = (Button) findViewById(R.id.button8);
-        profileButton.setOnClickListener(this);
+        profileHome = (RelativeLayout) findViewById(R.id.profileHome);
+        profileHome.setOnClickListener(this);
 
-        foodButton = (Button) findViewById(R.id.button9);
-        foodButton.setOnClickListener(this);
+        foodHome = (RelativeLayout) findViewById(R.id.foodHome);
+        foodHome.setOnClickListener(this);
 
-        diaryButton = (Button) findViewById(R.id.button7);
-        diaryButton.setOnClickListener(this);
+        diaryHome = (RelativeLayout) findViewById(R.id.diaryHome);
+        diaryHome.setOnClickListener(this);
 
-        historyButton = (Button) findViewById(R.id.button10);
-        historyButton.setOnClickListener(this);
+        calendarHome = (RelativeLayout) findViewById(R.id.calendarHome);
+        calendarHome.setOnClickListener(this);
 
-        trainingButton = (Button) findViewById(R.id.button16);
-        trainingButton.setOnClickListener(this);
+        trainingHome = (RelativeLayout) findViewById(R.id.trainingHome);
+        trainingHome.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.button11:
+            case R.id.logout:
                 startActivity(new Intent(HomePageActivity.this, MainActivity.class ));
                 break;
-            case R.id.button8:
+            case R.id.profileHome:
                 startActivity(new Intent(HomePageActivity.this, ProfileUser.class));
                 break;
-            case R.id.button9:
+            case R.id.foodHome:
                 startActivity(new Intent(HomePageActivity.this, FoodActivity.class));
                 break;
-            case R.id.button7:
+            case R.id.diaryHome:
                 startActivity(new Intent(HomePageActivity.this, DiaryActivity.class));
                 break;
-            case R.id.button10:
+            case R.id.calendarHome:
                 startActivity(new Intent(HomePageActivity.this, Calendar.class));
                 break;
-            case R.id.button16:
+            case R.id.trainingHome:
                 startActivity(new Intent(HomePageActivity.this, TrainingActivity.class));
                 break;
 
