@@ -7,108 +7,135 @@
     android:layout_height="match_parent"
     tools:context=".SearchFoodName">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView40"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="26dp"
-        android:text="Add to diary"
-        android:textSize="30dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/textView41"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="47dp"
-        android:text="Product Name"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/foodColor">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="15dp"
+                android:src="@drawable/back_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/backButton"
+                android:text="Add food to diary"
+                android:textColor="#fff"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="47dp"
+                android:text="Product Name"
+                android:textColor="#000"
+                android:textSize="20dp" />
 
 
-    <EditText
-        android:id="@+id/editTextProductSearch"
-        android:layout_width="152dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="47dp"
-        app:layout_constraintStart_toEndOf="@+id/textView41"
-        app:layout_constraintTop_toBottomOf="@+id/textView40" />
+            <EditText
+                android:id="@+id/editTextProductSearch"
+                android:layout_width="152dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="47dp"
+                android:layout_toEndOf="@+id/textView41" />
 
-    <TextView
-        android:id="@+id/textView42"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="40dp"
-        android:text="Quantity"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView41" />
 
-    <EditText
-        android:id="@+id/editTextQuantityName"
-        android:layout_width="152dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="79dp"
-        android:layout_marginTop="38dp"
-        app:layout_constraintStart_toEndOf="@+id/textView42"
-        app:layout_constraintTop_toBottomOf="@+id/editTextProductSearch" />
+        </RelativeLayout>
 
-    <TextView
-        android:id="@+id/textView43"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="40dp"
-        android:text="Category"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView42" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/textView44"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="180dp"
-        android:text="g"
-        android:textSize="20dp"
-        app:layout_constraintStart_toEndOf="@+id/editTextQuantityName"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="40dp"
+                android:text="Quantity"
+                android:textColor="#000"
+                android:textSize="20dp" />
 
-    <Spinner
-        android:id="@+id/spinnerFoodCategory"
-        android:layout_width="152dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="38dp"
-        android:entries="@array/array_food_categories"
-        app:layout_constraintStart_toEndOf="@+id/textView43"
-        app:layout_constraintTop_toBottomOf="@+id/editTextQuantityName" />
+            <EditText
+                android:id="@+id/editTextQuantityName"
+                android:layout_width="152dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="79dp"
+                android:layout_marginTop="38dp"
+                android:layout_toEndOf="@+id/textView42" />
 
-    <Button
-        android:id="@+id/button14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="98dp"
-        android:text="Add"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerFoodCategory" />
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="45dp"
+                android:layout_toEndOf="@+id/editTextQuantityName"
+                android:text="g"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="40dp"
+                android:text="Category"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <Spinner
+                android:id="@+id/spinnerFoodCategory"
+                android:layout_width="152dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="38dp"
+                android:layout_toEndOf="@+id/textView43"
+                android:entries="@array/array_food_categories" />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="158dp"
+            android:layout_marginTop="98dp"
+            android:text="Add" />
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

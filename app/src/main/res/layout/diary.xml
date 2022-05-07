@@ -9,279 +9,620 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp">
+        android:orientation="vertical">
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/diaryColor">
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-               <TableLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="match_parent">
-
-                   <TableRow
-                       android:layout_width="match_parent"
-                       android:layout_height="match_parent">
-
-                       <ImageView
-                           android:id="@+id/backToHome"
-                           android:layout_width="40dp"
-                           android:layout_height="40dp"
-                           android:layout_marginStart="16dp"
-                           android:layout_marginTop="11dp"
-                           android:src="@drawable/back" />
-
-                       <TextView
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:layout_marginStart="30dp"
-                           android:layout_marginTop="10dp"
-                           android:text="Food Diary"
-                           android:textSize="30sp"/>
-
-                   </TableRow>
-
-               </TableLayout>
-
-            </TableRow>
-
-        </TableLayout>
-
-        <!--Food-->
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/textViewTarget"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Target: "/>
-
-                <TextView
-                    android:id="@+id/textViewTargetCalorii"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Target calorii"/>
-
-                <TextView
-                    android:id="@+id/textViewSum"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Sum: "/>
-
-                <TextView
-                    android:id="@+id/textViewSumCalorii"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Sum calorii "/>
-
-            </TableRow>
-
-        </TableLayout>
-        <!--//Food-->
-
-        <!--Breakfast-->
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/moreBreakfast"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginTop="20dp"
-                    android:src="@drawable/more"/>
-
-                <TextView
-                    android:id="@+id/headlineBreakfast"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="20dp"
-                    android:textSize="20dp"
-                    android:text="Breakfast"/>
-            </TableRow>
-
-        </TableLayout>
-        <!--//Breakfast-->
-
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="18dp">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <ListView
-                    android:id="@+id/breakfastListView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp"/>
-            </TableRow>
-        </TableLayout>
-
-        <!--Lunch-->
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/moreLunch"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginTop="20dp"
-                    android:src="@drawable/more"/>
-
-                <TextView
-                    android:id="@+id/headlineLunch"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="20dp"
-                    android:textSize="20dp"
-                    android:text="Lunch"/>
-            </TableRow>
-
-        </TableLayout>
-        <!--//Lunch-->
-
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="18dp">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <ListView
-                    android:id="@+id/lunchListView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp"/>
-            </TableRow>
-        </TableLayout>
-
-        <!--Dinner-->
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/moreDinner"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginTop="20dp"
-                    android:src="@drawable/more"/>
-
-                <TextView
-                    android:id="@+id/headlineDinner"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="20dp"
-                    android:textSize="20dp"
-                    android:text="Dinner"/>
-            </TableRow>
-
-        </TableLayout>
-        <!--//Dinner-->
-
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="18dp">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <ListView
-                    android:id="@+id/dinnerListView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp"/>
-            </TableRow>
-        </TableLayout>
-
-        <!--Snacks-->
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/moreSnacks"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginTop="20dp"
-                    android:src="@drawable/more"/>
-
-                <TextView
-                    android:id="@+id/headlineSnacks"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="20dp"
-                    android:textSize="20dp"
-                    android:text="Snacks"/>
-            </TableRow>
-
-        </TableLayout>
-        <!--//Snacks-->
-
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="18dp">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <ListView
-                    android:id="@+id/snacksListView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp" />
-            </TableRow>
-        </TableLayout>
-
-
-
+        <ImageView
+            android:id="@+id/backToHome"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="15dp"
+            android:src="@drawable/back_arrow"/>
 
     </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/diaryColor"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/image_profile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/diary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/image_profile"
+                android:text="My Diary"
+                android:textColor="#fff"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Food-->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textViewTarget"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#000"
+                        android:text="Target: "/>
+
+                    <TextView
+                        android:id="@+id/textViewTargetCalorii"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#000"
+                        android:text="Target calorii"/>
+
+                    <TextView
+                        android:id="@+id/textViewSum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#000"
+                        android:text="Sum: "/>
+
+                    <TextView
+                        android:id="@+id/textViewSumCalorii"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#000"
+                        android:text="Sum calorii "/>
+
+                </TableRow>
+
+            </TableLayout>
+            <!--//Food-->
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Breakfast-->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/moreBreakfast"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/more"/>
+
+                    <TextView
+                        android:id="@+id/headlineBreakfast"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp"
+                        android:textSize="20dp"
+                        android:text="Breakfast"/>
+
+                </TableRow>
+
+            </TableLayout>
+            <!--//Breakfast-->
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="18dp"
+                android:layout_marginLeft="10dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <ListView
+                        android:id="@+id/breakfastListView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"/>
+                </TableRow>
+
+            </TableLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Lunch-->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/moreLunch"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/more"/>
+
+                    <TextView
+                        android:id="@+id/headlineLunch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp"
+                        android:textSize="20dp"
+                        android:text="Lunch"/>
+                </TableRow>
+
+            </TableLayout>
+            <!--//Lunch-->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="18dp"
+                android:layout_marginLeft="10dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <ListView
+                        android:id="@+id/lunchListView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"/>
+                </TableRow>
+
+            </TableLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Dinner-->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/moreDinner"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/more"/>
+
+                    <TextView
+                        android:id="@+id/headlineDinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp"
+                        android:textSize="20dp"
+                        android:text="Dinner"/>
+                </TableRow>
+
+            </TableLayout>
+            <!--//Dinner-->
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="18dp"
+                android:layout_marginLeft="10dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <ListView
+                        android:id="@+id/dinnerListView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"/>
+                </TableRow>
+
+            </TableLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Snacks-->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/moreSnacks"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/more"/>
+
+                    <TextView
+                        android:id="@+id/headlineSnacks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp"
+                        android:textSize="20dp"
+                        android:text="Snacks"/>
+                </TableRow>
+
+            </TableLayout>
+            <!--//Snacks-->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="18dp"
+                android:layout_marginLeft="10dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <ListView
+                        android:id="@+id/snacksListView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp" />
+                </TableRow>
+
+            </TableLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:layout_marginBottom="20dp">-->
+
+<!--        <TableLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--               <TableLayout-->
+<!--                   android:layout_width="match_parent"-->
+<!--                   android:layout_height="match_parent">-->
+
+<!--                   <TableRow-->
+<!--                       android:layout_width="match_parent"-->
+<!--                       android:layout_height="match_parent">-->
+
+<!--                       <ImageView-->
+<!--                           android:id="@+id/backToHome"-->
+<!--                           android:layout_width="40dp"-->
+<!--                           android:layout_height="40dp"-->
+<!--                           android:layout_marginStart="16dp"-->
+<!--                           android:layout_marginTop="11dp"-->
+<!--                           android:src="@drawable/back" />-->
+
+<!--                       <TextView-->
+<!--                           android:layout_width="wrap_content"-->
+<!--                           android:layout_height="wrap_content"-->
+<!--                           android:layout_marginStart="30dp"-->
+<!--                           android:layout_marginTop="10dp"-->
+<!--                           android:text="Food Diary"-->
+<!--                           android:textSize="30sp"/>-->
+
+<!--                   </TableRow>-->
+
+<!--               </TableLayout>-->
+
+<!--            </TableRow>-->
+
+<!--        </TableLayout>-->
+
+<!--        &lt;!&ndash;Food&ndash;&gt;-->
+<!--        <TableLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textViewTarget"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="50dp"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:text="Target: "/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textViewTargetCalorii"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:text="Target calorii"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textViewSum"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:text="Sum: "/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textViewSumCalorii"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:text="Sum calorii "/>-->
+
+<!--            </TableRow>-->
+
+<!--        </TableLayout>-->
+<!--        &lt;!&ndash;//Food&ndash;&gt;-->
+
+<!--        &lt;!&ndash;Breakfast&ndash;&gt;-->
+<!--        <TableLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/moreBreakfast"-->
+<!--                    android:layout_width="25dp"-->
+<!--                    android:layout_height="25dp"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:src="@drawable/more"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/headlineBreakfast"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:textSize="20dp"-->
+<!--                    android:text="Breakfast"/>-->
+<!--            </TableRow>-->
+
+<!--        </TableLayout>-->
+<!--        &lt;!&ndash;//Breakfast&ndash;&gt;-->
+
+<!--        <TableLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginBottom="18dp">-->
+
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent" >-->
+
+<!--                <ListView-->
+<!--                    android:id="@+id/breakfastListView"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="200dp"/>-->
+<!--            </TableRow>-->
+<!--        </TableLayout>-->
+
+<!--        &lt;!&ndash;Lunch&ndash;&gt;-->
+<!--        <TableLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/moreLunch"-->
+<!--                    android:layout_width="25dp"-->
+<!--                    android:layout_height="25dp"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:src="@drawable/more"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/headlineLunch"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:textSize="20dp"-->
+<!--                    android:text="Lunch"/>-->
+<!--            </TableRow>-->
+
+<!--        </TableLayout>-->
+<!--        &lt;!&ndash;//Lunch&ndash;&gt;-->
+
+<!--        <TableLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginBottom="18dp">-->
+
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent" >-->
+
+<!--                <ListView-->
+<!--                    android:id="@+id/lunchListView"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="200dp"/>-->
+<!--            </TableRow>-->
+<!--        </TableLayout>-->
+
+<!--        &lt;!&ndash;Dinner&ndash;&gt;-->
+<!--        <TableLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/moreDinner"-->
+<!--                    android:layout_width="25dp"-->
+<!--                    android:layout_height="25dp"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:src="@drawable/more"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/headlineDinner"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:textSize="20dp"-->
+<!--                    android:text="Dinner"/>-->
+<!--            </TableRow>-->
+
+<!--        </TableLayout>-->
+<!--        &lt;!&ndash;//Dinner&ndash;&gt;-->
+
+<!--        <TableLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginBottom="18dp">-->
+
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent" >-->
+
+<!--                <ListView-->
+<!--                    android:id="@+id/dinnerListView"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="200dp"/>-->
+<!--            </TableRow>-->
+<!--        </TableLayout>-->
+
+<!--        &lt;!&ndash;Snacks&ndash;&gt;-->
+<!--        <TableLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/moreSnacks"-->
+<!--                    android:layout_width="25dp"-->
+<!--                    android:layout_height="25dp"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:src="@drawable/more"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/headlineSnacks"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:textSize="20dp"-->
+<!--                    android:text="Snacks"/>-->
+<!--            </TableRow>-->
+
+<!--        </TableLayout>-->
+<!--        &lt;!&ndash;//Snacks&ndash;&gt;-->
+
+<!--        <TableLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginBottom="18dp">-->
+
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent" >-->
+
+<!--                <ListView-->
+<!--                    android:id="@+id/snacksListView"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="200dp" />-->
+<!--            </TableRow>-->
+<!--        </TableLayout>-->
+
+
+
+
+<!--    </LinearLayout>-->
 
 </ScrollView>

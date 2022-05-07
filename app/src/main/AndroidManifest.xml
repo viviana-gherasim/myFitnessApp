@@ -107,6 +107,10 @@
             android:name=".NutritionDetails">
         </activity>
 
+        <activity
+            android:name=".StepCounter">
+        </activity>
+
     </application>
 
 </manifest>

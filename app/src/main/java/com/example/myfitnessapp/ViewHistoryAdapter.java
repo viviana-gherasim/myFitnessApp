@@ -49,7 +49,7 @@ public class ViewHistoryAdapter extends ArrayAdapter<FoodDiary> {
         String strProteine= String.valueOf((int)fProteine);
         float fCantitate=Float.parseFloat(cantitate);
         String strCantitate=String.valueOf((int)fCantitate);
-        String strMesaj="KCal: "+strCalorii+"\n Carbs: "+strCarbo+" Fats: "+strGrasimi+" Proteins: "+strProteine+" Quantity: "+strCantitate+"g";
+        String strMesaj="KCal: "+strCalorii+"\nCarbs: "+strCarbo+"   Fats: "+strGrasimi+"   Proteins: "+strProteine+"\nQuantity: "+strCantitate+"g";
 
         // Food food=new Food(name,calories);
         LayoutInflater inflater =LayoutInflater.from(mContext);

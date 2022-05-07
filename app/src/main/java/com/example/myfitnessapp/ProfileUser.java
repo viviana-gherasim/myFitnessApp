@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,7 +30,8 @@ import java.util.List;
 
 public class ProfileUser extends AppCompatActivity implements View.OnClickListener {
 
-    private Button back, btnUpdate;
+    private ImageView back;
+    private Button btnUpdate;
     private FirebaseDatabase database;
     private DatabaseReference databaseReference;
     private TextView t1, t2, t3, t4, t5;
@@ -42,7 +44,7 @@ public class ProfileUser extends AppCompatActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile);
 
-        back = (Button) findViewById(R.id.button12);
+        back = (ImageView) findViewById(R.id.image_back);
         back.setOnClickListener(this);
 
         btnUpdate = (Button) findViewById(R.id.button17);
@@ -113,7 +115,7 @@ public class ProfileUser extends AppCompatActivity implements View.OnClickListen
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.button12:
+            case R.id.image_back:
                 startActivity(new Intent(ProfileUser.this, HomePageActivity.class));
                 break;
             case R.id.button17:

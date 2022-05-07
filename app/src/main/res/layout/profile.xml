@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,200 +7,262 @@
     android:layout_height="match_parent"
     tools:context=".ProfileUser">
 
-    <Button
-        android:id="@+id/button12"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginBottom="164dp"
-        android:text="Back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginBottom="35dp"
-        android:text="Email"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView14"
-        app:layout_constraintStart_toStartOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/profileColor">
 
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginBottom="34dp"
-        android:text="Date of birth"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView15"
-        app:layout_constraintStart_toStartOf="parent" />
+            <ImageView
+                android:id="@+id/image_back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="15dp"
+                android:src="@drawable/back_arrow"/>
 
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginBottom="33dp"
-        android:text="Height"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView16"
-        app:layout_constraintStart_toStartOf="parent" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginBottom="32dp"
-        android:text="Weight"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView17"
-        app:layout_constraintStart_toStartOf="parent" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/profileColor"
+            android:padding="20dp">
 
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginBottom="78dp"
-        android:text="Target Weight"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/button12"
-        app:layout_constraintStart_toStartOf="parent" />
+            <ImageView
+                android:id="@+id/image_profile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/user" />
 
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="94dp"
-        android:layout_marginBottom="24dp"
-        android:inputType="textEmailAddress"
-        android:text="TextView"
-        android:textSize="18dp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/textView19"
-        app:layout_constraintStart_toEndOf="@+id/textView13" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/image_profile"
+                android:text="My profile"
+                android:textColor="#fff"
+                android:textSize="25dp"
+                android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginBottom="27dp"
-        android:ems="2"
-        android:text="TextView"
-        android:textSize="18dp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/textView20"
-        app:layout_constraintStart_toEndOf="@+id/textView14" />
+        </RelativeLayout>
 
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="85dp"
-        android:layout_marginBottom="39dp"
-        android:inputType="number"
-        android:text="TextView"
-        android:textSize="18dp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/textView21"
-        app:layout_constraintStart_toEndOf="@+id/textView15" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/textView21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginBottom="36dp"
-        android:inputType="number"
-        android:text="TextView"
-        android:textSize="18dp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/textView22"
-        app:layout_constraintStart_toEndOf="@+id/textView16" />
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginBottom="35dp"
+                android:text="Email"
+                android:textSize="20dp"/>
 
-    <EditText
-        android:id="@+id/textView22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="19dp"
-        android:layout_marginBottom="78dp"
-        android:inputType="number"
-        android:text="TextView"
-        android:textSize="18dp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/button12"
-        app:layout_constraintStart_toEndOf="@+id/textView17" />
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="24dp"
+                android:layout_toEndOf="@+id/textView13"
+                android:inputType="textEmailAddress"
+                android:text="TextView"
+                android:textSize="18dp"
+                android:visibility="visible" />
 
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="39dp"
-        android:text="Cm"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView24"
-        app:layout_constraintStart_toEndOf="@+id/textView20" />
+        </RelativeLayout>
 
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginBottom="32dp"
-        android:text="Kg"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView25"
-        app:layout_constraintStart_toEndOf="@+id/textView21" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginBottom="293dp"
-        android:text="Kg"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView22" />
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginBottom="34dp"
+                android:text="Date of birth"
+                android:textSize="20dp" />
 
-    <TextView
-        android:id="@+id/textView26"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="27dp"
-        android:ems="2"
-        android:text="TextView"
-        android:textSize="18dp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/textView20"
-        app:layout_constraintStart_toEndOf="@+id/textView19" />
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:layout_marginBottom="27dp"
+                android:layout_toEndOf="@id/textView14"
+                android:ems="2"
+                android:text="TextView"
+                android:textSize="18dp"
+                android:visibility="visible" />
 
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="27dp"
-        android:ems="3"
-        android:text="TextView"
-        android:textSize="18dp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/textView23"
-        app:layout_constraintStart_toEndOf="@+id/textView26" />
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="27dp"
+                android:layout_toEndOf="@id/textView19"
+                android:ems="2"
+                android:text="TextView"
+                android:textSize="18dp"
+                android:visibility="visible"/>
 
-    <Button
-        android:id="@+id/button17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginBottom="164dp"
-        android:text="Update"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button12" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="27dp"
+                android:layout_toEndOf="@id/textView26"
+                android:ems="3"
+                android:text="TextView"
+                android:textSize="18dp"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginBottom="33dp"
+                android:text="Height"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="39dp"
+                android:layout_toEndOf="@+id/textView15"
+                android:inputType="number"
+                android:text="TextView"
+                android:textSize="18dp"
+                android:visibility="visible"/>
+
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="39dp"
+                android:layout_toEndOf="@+id/textView20"
+                android:text="Cm"
+                android:textSize="18dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginBottom="32dp"
+                android:text="Weight"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginBottom="36dp"
+                android:layout_toEndOf="@id/textView16"
+                android:inputType="number"
+                android:text="TextView"
+                android:textSize="18dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="9dp"
+                android:layout_marginBottom="32dp"
+                android:layout_toEndOf="@id/textView21"
+                android:text="Kg"
+                android:textSize="18dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginBottom="78dp"
+                android:text="Target Weight"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:layout_marginBottom="78dp"
+                android:layout_toEndOf="@id/textView17"
+                android:inputType="number"
+                android:text="TextView"
+                android:textSize="18dp"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="9dp"
+                android:layout_marginBottom="293dp"
+                android:text="Kg"
+                android:textSize="18dp"
+                android:layout_toEndOf="@id/textView22"/>
+
+
+            <Button
+                android:id="@+id/button17"
+                android:layout_width="277dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="56dp"
+                android:background="@drawable/round_button"
+                android:text="Update"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

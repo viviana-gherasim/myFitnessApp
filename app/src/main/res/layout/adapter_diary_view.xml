@@ -7,17 +7,19 @@
 
     <TextView
         android:id="@+id/textView38"
-        android:layout_width="198dp"
-        android:layout_height="71dp"
+        android:layout_width="170dp"
+        android:layout_height="80dp"
         android:text="TextView"
+        android:textColor="#000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView39"
-        android:layout_width="213dp"
-        android:layout_height="71dp"
+        android:layout_width="240dp"
+        android:layout_height="80dp"
         android:text="TextView"
+        android:textColor="#000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -57,7 +57,7 @@ public class DiaryActivityAdapter extends ArrayAdapter<FoodDiary> {
         float fCantitate=Float.parseFloat(quantity);
         String strCantitate=String.valueOf((int)fCantitate);
 
-        String strMesaj="KCal: "+strCalorii+"\n Carbs: "+strCarbo+" Fats: "+strGrasimi+" Proteins: "+strProteine+" Quantity: "+strCantitate+"g";
+        String strMesaj="KCal: "+strCalorii+"\nCarbs: "+strCarbo+" Fats: "+strGrasimi+" Proteins: "+strProteine+" Quantity: "+strCantitate+"g";
 
         LayoutInflater inflater = LayoutInflater.from(mContext);
         convertView = inflater.inflate(mRes, parent, false);

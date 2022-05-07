@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HomePageActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private RelativeLayout profileHome, foodHome, diaryHome, calendarHome, trainingHome;
+    private RelativeLayout profileHome, foodHome, diaryHome, calendarHome, trainingHome, pedometerHome;
     private Button logout;
 
     @Override
@@ -36,6 +36,9 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
 
         trainingHome = (RelativeLayout) findViewById(R.id.trainingHome);
         trainingHome.setOnClickListener(this);
+
+        pedometerHome = (RelativeLayout) findViewById(R.id.pedometerHome);
+        pedometerHome.setOnClickListener(this);
     }
 
     @Override
@@ -58,6 +61,10 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.trainingHome:
                 startActivity(new Intent(HomePageActivity.this, TrainingActivity.class));
+                break;
+
+            case R.id.pedometerHome:
+                startActivity(new Intent(HomePageActivity.this, StepCounter.class));
                 break;
 
         }

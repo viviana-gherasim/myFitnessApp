@@ -13,14 +13,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Home"-->
-<!--            android:textSize="30dp"-->
-<!--            android:textColor="#000"-->
-<!--            android:layout_marginTop="20dp"-->
-<!--            android:layout_marginStart="20dp"/>-->
 
         <androidx.cardview.widget.CardView
             android:layout_width="353dp"
@@ -57,9 +49,9 @@
                 <ImageView
                     android:layout_width="120dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/user"
+                    android:layout_alignParentRight="true"
                     android:layout_marginTop="10dp"
-                    android:layout_alignParentRight="true"/>
+                    android:src="@drawable/user" />
 
             </RelativeLayout>
 
@@ -101,9 +93,9 @@
                 <ImageView
                     android:layout_width="120dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/fast_food"
+                    android:layout_alignParentRight="true"
                     android:layout_marginTop="10dp"
-                    android:layout_alignParentRight="true"/>
+                    android:src="@drawable/fast_food" />
 
             </RelativeLayout>
 
@@ -189,7 +181,7 @@
                     android:layout_height="100dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/tracker" />
+                    android:src="@drawable/calendar" />
 
             </RelativeLayout>
 
@@ -233,6 +225,49 @@
                     android:src="@drawable/training"
                     android:layout_marginTop="10dp"
                     android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="353dp"
+            android:layout_height="120dp"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="15dp">
+
+            <RelativeLayout
+                android:id="@+id/pedometerHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/pedometerColor">
+
+                <TextView
+                    android:id="@+id/t6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pedometer"
+                    android:textSize="30sp"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/t6"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Step counter."
+                    android:textColor="#fff" />
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/step_counter" />
 
             </RelativeLayout>
 

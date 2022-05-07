@@ -3,6 +3,7 @@ package com.example.myfitnessapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 
@@ -20,7 +21,8 @@ import java.util.ArrayList;
 
 public class FoodActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageView back, add;
+    private ImageView back;
+    Button add;
     private Food food;
     private ListView foodList;
     private ArrayList<Food> foodArray = new ArrayList<>();
@@ -35,7 +37,7 @@ public class FoodActivity extends AppCompatActivity implements View.OnClickListe
         back = (ImageView) findViewById(R.id.backToHomePage);
         back.setOnClickListener(this);
 
-        add = (ImageView) findViewById(R.id.addFoodButton);
+        add = (Button) findViewById(R.id.addFoodButton);
         add.setOnClickListener(this);
 
         foodList = (ListView) findViewById(R.id.foodListView);
