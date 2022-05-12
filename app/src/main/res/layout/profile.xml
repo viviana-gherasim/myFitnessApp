@@ -91,6 +91,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="35dp"
                 android:layout_marginBottom="34dp"
+                android:layout_marginTop="10dp"
                 android:text="Date of birth"
                 android:textSize="20dp" />
 
@@ -140,6 +141,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="35dp"
                 android:layout_marginBottom="33dp"
+                android:layout_marginTop="10dp"
                 android:text="Height"
                 android:textSize="20dp" />
 
@@ -181,8 +183,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="35dp"
                 android:layout_marginBottom="32dp"
+                android:layout_marginTop="10dp"
                 android:text="Weight"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/textView21"
@@ -219,8 +222,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="35dp"
                 android:layout_marginBottom="78dp"
+                android:layout_marginTop="10dp"
                 android:text="Target Weight"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/textView22"

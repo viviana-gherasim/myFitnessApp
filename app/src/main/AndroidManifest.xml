@@ -3,6 +3,7 @@
     package="com.example.myfitnessapp">
 
     <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus"/>
 
@@ -108,7 +109,19 @@
         </activity>
 
         <activity
-            android:name=".StepCounter">
+            android:name=".WeightCheck">
+        </activity>
+
+        <activity
+            android:name=".NutritionMain">
+        </activity>
+
+        <activity
+            android:name=".BookingActivity">
+        </activity>
+
+        <activity
+            android:name=".AddCity">
         </activity>
 
     </application>
