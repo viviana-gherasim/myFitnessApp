@@ -124,6 +124,10 @@
             android:name=".AddCity">
         </activity>
 
+        <activity
+            android:name=".AddNutritionist">
+        </activity>
+
     </application>
 
 </manifest>

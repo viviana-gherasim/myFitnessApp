@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class HomePageActivity extends AppCompatActivity implements View.OnClickListener {
 
     private RelativeLayout profileHome, foodHome, diaryHome, calendarHome, trainingHome, pedometerHome, health;
-    private Button logout, addCity;
+    private Button logout, addCity, addNutritionist;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,6 +45,9 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
 
         addCity = (Button) findViewById(R.id.cityButton);
         addCity.setOnClickListener(this);
+
+        addNutritionist = (Button) findViewById(R.id.nutritionistButton);
+        addNutritionist.setOnClickListener(this);
     }
 
     @Override
@@ -75,6 +78,11 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
 
             case R.id.cityButton:
                 startActivity(new Intent(HomePageActivity.this, AddCity.class));
+                break;
+
+            case R.id.nutritionistButton:
+                startActivity(new Intent(HomePageActivity.this, AddNutritionist.class));
+                break;
         }
     }
 }

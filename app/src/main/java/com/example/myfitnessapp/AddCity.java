@@ -33,6 +33,7 @@ public class AddCity extends AppCompatActivity implements View.OnClickListener {
         add.setOnClickListener(this);
 
         back = (ImageView) findViewById(R.id.backButton);
+        back.setOnClickListener(this);
 
         database = FirebaseDatabase.getInstance("https://my-fitness-app-aa2ef-default-rtdb.europe-west1.firebasedatabase.app").getReference().child("City");
 
@@ -44,6 +45,10 @@ public class AddCity extends AppCompatActivity implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.buttonAddCity:
                 addCityToDatabase();
+
+            case R.id.backButton:
+                startActivity(new Intent(this, HomePageActivity.class));
+                break;
         }
     }
 

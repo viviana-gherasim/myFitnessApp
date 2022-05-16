@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/foodColor">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="15dp"
+            android:src="@drawable/back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/backButton"
+            android:text="Add nutritionist"
+            android:layout_marginTop="8dp"
+            android:textColor="#fff"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:id="@+id/nutritionist_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="24dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000"/>
+
+            <EditText
+                android:id="@+id/editTextNutritionistName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="textPersonName" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:id="@+id/nutritionist_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textSize="24dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000"/>
+
+            <EditText
+                android:id="@+id/editTextNutritionistEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textPersonName" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:id="@+id/nutritionist_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textSize="24dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000"/>
+
+            <EditText
+                android:id="@+id/editTextNutritionistAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:ems="10"
+                android:hint="Address"
+                android:inputType="textPersonName" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:id="@+id/nutritionist_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                android:textSize="24dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000"/>
+
+            <EditText
+                android:id="@+id/editTextNutritionistPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:ems="10"
+                android:hint="Phone"
+                android:inputType="textPersonName" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:id="@+id/nutritionist_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="City"
+                android:textSize="24dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000"/>
+
+            <EditText
+                android:id="@+id/editTextNutritionistCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:ems="10"
+                android:hint="City"
+                android:inputType="textPersonName" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/buttonAddNutritionist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="16dp"
+            android:text="ADD" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -106,21 +106,6 @@ public class BookingStep1Fragment extends Fragment implements AllCitiesLoadListe
 
             }
         });
-//        databaseReference.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                for (DataSnapshot d:snapshot.getChildren()) {
-//                    city = d.getValue(City.class);
-//                    cityArray.add(city);
-//                }
-//
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
     }
 
     @Override
