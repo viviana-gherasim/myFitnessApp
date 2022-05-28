@@ -9,9 +9,7 @@
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:scrollbars="none"
-
-        >
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -150,7 +148,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="monospace"
                             android:padding="5.0dp"
-                            android:text="Advanced"
+                            android:text="Medium"
                             android:textColor="#ff000000"
                             android:textSize="20dp"
                             android:textStyle="bold"/>
@@ -183,7 +181,7 @@
                         <pl.droidsonroids.gif.GifImageView
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ex1"/>
+                            android:src="@drawable/double_pulse_squat"/>
 
 
                     </LinearLayout>
@@ -215,48 +213,60 @@
 
             </LinearLayout>
 
-
             <LinearLayout
-                android:onClick="nutrition"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_marginTop="15dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15.0dp"
+                android:layout_margin="10.0dp"
                 android:orientation="vertical"
                 android:background="@drawable/backgroundcrop">
 
 
                 <LinearLayout
+                    android:onClick="during18"
                     android:layout_width="fill_parent"
                     android:layout_height="150dp"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
 
+                    >
 
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1.0"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
 
+                        >
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="monospace"
-                            android:padding="5dp"
-                            android:text="Nutrition and tips"
+                            android:padding="5.0dp"
+                            android:text="Advanced"
+                            android:textColor="#ff000000"
                             android:textSize="20dp"
-                            android:textStyle="bold"
-                            android:textColor="#ff000000"/>
+                            android:textStyle="bold"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Suggestion for free"
+                            android:fontFamily="serif"
                             android:padding="5dp"
+                            android:text="Days 60"
+                            android:textSize="20dp"
                             android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Every Day 30 MIN"
+                            android:textColor="#ffff5722"
+                            android:textStyle="bold"/>
+
 
                     </LinearLayout>
 
@@ -265,10 +275,11 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="2.0">
 
-                        <ImageView
+                        <pl.droidsonroids.gif.GifImageView
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/diet"/>
+                            android:src="@drawable/inner_thigh_lifts"/>
+
 
                     </LinearLayout>
 
@@ -277,22 +288,27 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0.0">
 
+
                         <ImageView
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:padding="10.0dp"
                             android:src="@drawable/ic_baseline_keyboard_arrow_right_24"/>
 
+
                     </LinearLayout>
-
-
 
 
                 </LinearLayout>
 
+                <Button
+                    android:id="@+id/startTraining3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10.0dp"
+                    android:text="Get started"/>
 
             </LinearLayout>
-
 
             <LinearLayout
                 android:layout_width="match_parent"

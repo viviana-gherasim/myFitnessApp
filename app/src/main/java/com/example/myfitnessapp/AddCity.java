@@ -68,7 +68,7 @@ public class AddCity extends AppCompatActivity implements View.OnClickListener {
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()) {
                     Toast.makeText(AddCity.this, "City inserted successfully into database", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(getApplicationContext(), HomePageActivity.class));
+                    //startActivity(new Intent(getApplicationContext(), HomePageActivity.class));
                 }
                 else{
                     Toast.makeText(AddCity.this, "Insertion city failed!", Toast.LENGTH_LONG).show();

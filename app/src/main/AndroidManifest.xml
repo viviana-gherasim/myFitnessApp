@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -15,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFitnessApp">
         <activity
-            android:name=".MainActivity"
+            android:name=".NutritionMain"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -89,6 +90,10 @@
         </activity>
 
         <activity
+            android:name=".MediumTraining">
+        </activity>
+
+        <activity
             android:name=".AdvancedTraining">
         </activity>
 
@@ -97,15 +102,11 @@
         </activity>
 
         <activity
+            android:name=".ExerciseMedium">
+        </activity>
+
+        <activity
             android:name=".ExerciseAdvanced">
-        </activity>
-
-        <activity
-            android:name=".NutritionActivity">
-        </activity>
-
-        <activity
-            android:name=".NutritionDetails">
         </activity>
 
         <activity
@@ -113,8 +114,12 @@
         </activity>
 
         <activity
-            android:name=".NutritionMain">
+            android:name=".ManagerActivity">
         </activity>
+
+<!--        <activity-->
+<!--            android:name=".NutritionMain">-->
+<!--        </activity>-->
 
         <activity
             android:name=".BookingActivity">
@@ -126,6 +131,14 @@
 
         <activity
             android:name=".AddNutritionist">
+        </activity>
+
+        <activity
+            android:name=".MessageMain">
+        </activity>
+
+        <activity
+            android:name=".QuizMain">
         </activity>
 
     </application>

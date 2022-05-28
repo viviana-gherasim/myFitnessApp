@@ -103,8 +103,6 @@ public class AddNutritionist extends AppCompatActivity implements View.OnClickLi
         database = FirebaseDatabase.getInstance("https://my-fitness-app-aa2ef-default-rtdb.europe-west1.firebasedatabase.app");
         databaseReference = database.getReference().child("City");
 
-
-
                         Query cityByNameQuery = databaseReference.orderByChild("name").equalTo(nutritionistCity);
                         cityByNameQuery.addChildEventListener(new ChildEventListener() {
                             @Override

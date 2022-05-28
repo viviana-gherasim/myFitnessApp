@@ -84,7 +84,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    startActivity(new Intent(LoginActivity.this,HomePageActivity.class));
+                    if(email.equals("manager@gmail.com")) {
+                        startActivity(new Intent(LoginActivity.this, ManagerActivity.class));
+                    }
+                    else
+                        { startActivity(new Intent(LoginActivity.this,HomePageActivity.class)); }
                 }
                 else
                 {

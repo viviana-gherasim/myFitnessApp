@@ -9,7 +9,7 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class AdvancedTraining extends AppCompatActivity implements View.OnClickListener{
+public class AdvancedTraining extends AppCompatActivity implements View.OnClickListener {
 
     private Button back;
     int [] newArray;
@@ -23,10 +23,9 @@ public class AdvancedTraining extends AppCompatActivity implements View.OnClickL
         back.setOnClickListener(this);
 
         newArray = new int[] {
-                R.id.position1, R.id.position2, R.id.position3, R.id.position4, R.id.position5, R.id.position6, R.id.position7, R.id.position8, R.id.position9, R.id.position10, R.id.position11, R.id.position12, R.id.position13, R.id.position14,  R.id.position15,
+                R.id.poz1, R.id.poz2, R.id.poz3, R.id.poz4, R.id.poz5, R.id.poz6, R.id.poz7, R.id.poz8, R.id.poz9, R.id.poz10, R.id.poz11, R.id.poz12, R.id.poz13, R.id.poz14, R.id.poz15,
         };
     }
-
     public void ImageButtonClicked(View view) {
 
         for(int i=0; i< newArray.length; i++) {
@@ -44,10 +43,6 @@ public class AdvancedTraining extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.backToTrainingActivity:
-                startActivity(new Intent(AdvancedTraining.this, TrainingActivity.class));
-                break;
-        }
+
     }
 }

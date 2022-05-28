@@ -184,22 +184,104 @@
         Step 4: Keep alternating legs until the set is complete.
     </string>
 
+    <string name="poz1">
+        Step 1: Lie on your belly with your arms and legs fully extended.
+        Step 2: Raise both arms and legs off the mat and lift your head and chest.
+        Step 3: Flutter your arms and legs and keep alternating sides for the entire duration of the set.
+    </string>
 
-    <string-array name="title_nutrition_and_tips">
-        <item>Just keep moving</item>
-        <item>Build for muscles</item>
-        <item>Make one meal a day vegan</item>
-        <item>Go green</item>
-        <item>Replace coffee with tea</item>
-        <item>Do yoga</item>
-    </string-array>
+    <string name="poz2">
+        Lie on your right side on the floor and rest your head on your right arm. Your legs should be in a straight line with your right leg slightly in front of the left leg. Both feet will be resting on the floor to start. Slowly lift the right leg 3 to 5 inches off the floor or until you feel your hips start to tilt. Slowly lower the leg. Repeat raising and lowering the leg 10 to 12 times and then switch sides.
+    </string>
 
-    <string-array name="details_nutrition_and_tips">
-        <item>moving details</item>
-        <item>building muscles</item>
-        <item>meal change</item>
-        <item>green all the way</item>
-        <item>coffee replacement</item>
-        <item>yoga practicing</item>
-    </string-array>
+    <string name="poz3">
+        Step 1: Stand up with your feet shoulder-width apart and hold a set of dumbbells in front of your thighs. \n\n
+        Step 2: Push your hips back and lower the dumbbells until your torso is parallel to the floor. \n\n
+        Step 3: Stand up and pull the dumbbells toward your chest, keeping your arms a little wider than shoulder-width apart. \n\n
+        Step 4: Repeat until the set is complete.
+    </string>
+
+    <string name="poz4">
+        Step 1: Lie on your back and extend your legs up to a 45-degree angle. Keep your arms straight and in line with the floor, palms facing down. Lift your head, neck and shoulders slightly off the ground. \n\n
+        Step 2: Keeping your legs stick straight and glued together with your toes pointed, start lowering one leg. \n\n
+        Step 3: Raise your lowered leg and lower the other, focusing on keeping your core engaged. \n\n
+        Step 4: Continue the movement, alternating between legs.
+    </string>
+
+    <string name="poz5">
+        Step 1: Lie down on your back. Plant your feet on the floor, hip-width apart. Bend your knees and place your arms across your chest. Contract your abs and inhale. \n\n
+        Step 2: Exhale and lift your upper body, keeping your head and neck relaxed. \n\n
+        Step 3: Inhale and return to the starting position.
+    </string>
+
+    <string name="poz6">
+        Step 1: Lie on your side, lengthen your bottom leg and cross your top leg over. \n\n
+        Step 2: Flex your bottom foot, lift the leg and then lower it back down, without letting it touch the floor. \n\n
+        Step 3: Repeat and switch sides.
+    </string>
+
+    <string name="poz7">
+        Step 1: Get into a plank position, making sure to distribute your weight evenly between your hands and your toes. \n\n
+        Step 2: Check your form—your hands should be about shoulder-width apart, back flat, abs engaged, and head in alignment. \n\n
+        Step 3: Pull your right knee into your chest as far as you can. \n\n
+        Step 4: Switch legs, pulling one knee out and bringing the other knee in. \n\n
+        Step 5: Keep your hips down and run your knees in and out as far and as fast as you can. Alternate inhaling and exhaling with each leg change.
+    </string>
+
+    <string name="poz8">
+        Step 1: Start with your hands out in front of you or resting on your hips. Stand upright with your toes facing forward. \n\n
+        Step 2: As you lift your right leg up off the floor with the foot flexed, inhale and shift the weight into your left foot. \n\n
+        Step 3: You exhale, bring the leg back down to meet the left. \n\n
+        Step 4: Repeat 10-12 times, then switch to the other side.
+    </string>
+
+    <string name="poz9">
+        Step 1: Stand with your feet shoulder-width apart and hold a dumbbell in each hand. \n\n
+        Step 2: Bend your knees, press your hips back, squeeze the biceps and lift the dumbbells. \n\n
+        Step 3: Press your heels into the floor to return to the initial position, and slowly lower the arms. \n\n
+        Step 4: Repeat until the set is complete.
+    </string>
+
+    <string name="poz10">
+         Step 1: Lie flat on the floor with your lower back pressed to the ground and knees bent. Your feet should be on the floor and your hands are behind your head. \n\n
+        Step 2: Contract your core muscles, drawing in your abdomen to stabilize your spine. \n\n
+        Step 3: With your hands gently holding your head, pull your shoulder blades back and slowly raise your knees to about a 90-degree angle, lifting your feet from the floor. \n\n
+        Step 4: Exhale and slowly, at first, go through a bicycle pedal motion, bringing one knee up towards your armpit while straightening the other leg, keeping both elevated higher than your hips. \n\n
+        Step 5: Rotate your torso so you can touch your elbow to the opposite knee as it comes up. \n\n
+        Step 6: Alternate to twist to the other side while drawing that knee towards your armpit and the other leg extended until your elbow touches the alternate knee.
+    </string>
+
+    <string name="poz11">
+        Step 1: Lie on your back with your arms by your sides, plant the soles of your feet on a wall, with your feet hip-width apart, knees bent, legs at a 90-degree angle, and your thighs perpendicular to the floor. \n\n
+        Step 2: Squeeze your glutes and raise your hips as high as you can. \n\n
+        Step 3: Return to the starting position and repeat until the set is complete.
+    </string>
+
+    <string name="poz12">
+        Step 1: Bend your legs at the knee and brace your abs to slowly raise your legs so the knees are directly over your hips and your lower legs are parallel to the floor (bent 90 degrees). This is the starting position. Brace the abdominal muscles and hold a neutral spine position with a slight natural curve in the lower back (lumbar) region yet with the back firmly against the floor. \n\n
+        Step 2: Exhale as you contract the abs to curl your hips and knees toward your chest, with only your hips coming off the mat as you curl. Your knees should remain at the same angle throughout this upward phase. Your head should be kept straight and the neck and shoulders should remain relaxed and on the mat. Hold when you cannot curl without your back coming off the mat. \n\n
+        Step 3: Inhale and slowly return to the starting position with your hips back on the mat and your knees over your hips, still bent 90 degrees. \n\n
+        Step 4: Try 10 repetitions for three sets starting out and increase it as you get stronger.
+    </string>
+
+    <string name="poz13">
+        Step 1: Get down on your hands and knees, place a dumbbell behind your right knee, flex your right foot, and raise your leg out to the side until the knee is parallel to the floor. \n\n
+        Step 2: Bring your right foot toward the left glute and squeeze the glutes. \n\n
+        Step 3: Bring your right knee back to the initial position and repeat. \n\n
+        Step 4: Switch legs.
+    </string>
+
+    <string name="poz14">
+        Step 1: Start with your feet hip-width apart, take a step to the front with your right leg, and lunge.\n\n
+        Step 2: As you come back up, kick your right leg back and squeeze the glutes. \n\n
+        Step 3: Return to the starting position and repeat with the left leg. \n\n
+        Step 4: Keep alternating legs until the set is complete.
+    </string>
+
+    <string name="poz15">
+        Step 1: Come into a forearm plank position with your shoulders stacked over your wrists. \n\n
+        Step 2: Engage your core while pressing your forearms and hands into the mat, keeping your low back stable. \n\n
+        Step 3: With control, dip your hips to one side, then use your obliques to bring you back to the starting position. Complete this movement on the other side. Repeat for 30 to 60 seconds.
+    </string>
+
 </resources>

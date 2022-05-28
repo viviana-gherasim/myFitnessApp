@@ -108,6 +108,7 @@ public class WeightCheck extends AppCompatActivity{
         View view = LayoutInflater.from(this).inflate(R.layout.custome_dialog, viewGroup, false);
         AppCompatButton ok = view.findViewById(R.id.ok);
         AppCompatButton nutritionist = view.findViewById(R.id.consult_nutritionist);
+        AppCompatButton exercise = view.findViewById(R.id.do_exercise);
         ImageView imageView = view.findViewById(R.id.image_view);
         TextView result_title = view.findViewById(R.id.result_title);
         TextView tips = view.findViewById(R.id.tips);
@@ -132,6 +133,13 @@ public class WeightCheck extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(WeightCheck.this, NutritionMain.class));
+            }
+        });
+
+        exercise.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(WeightCheck.this, TrainingActivity.class));
             }
         });
     }

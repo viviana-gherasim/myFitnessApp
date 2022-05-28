@@ -11,8 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HomePageActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private RelativeLayout profileHome, foodHome, diaryHome, calendarHome, trainingHome, pedometerHome, health;
-    private Button logout, addCity, addNutritionist;
+    private RelativeLayout profileHome, foodHome, diaryHome, calendarHome, pedometerHome, health;
+    private Button logout;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,20 +34,12 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
         calendarHome = (RelativeLayout) findViewById(R.id.calendarHome);
         calendarHome.setOnClickListener(this);
 
-        trainingHome = (RelativeLayout) findViewById(R.id.trainingHome);
-        trainingHome.setOnClickListener(this);
-
         pedometerHome = (RelativeLayout) findViewById(R.id.pedometerHome);
         pedometerHome.setOnClickListener(this);
 
         health = (RelativeLayout) findViewById(R.id.health);
         health.setOnClickListener(this);
 
-        addCity = (Button) findViewById(R.id.cityButton);
-        addCity.setOnClickListener(this);
-
-        addNutritionist = (Button) findViewById(R.id.nutritionistButton);
-        addNutritionist.setOnClickListener(this);
     }
 
     @Override
@@ -68,21 +60,11 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
             case R.id.calendarHome:
                 startActivity(new Intent(HomePageActivity.this, Calendar.class));
                 break;
-            case R.id.trainingHome:
-                startActivity(new Intent(HomePageActivity.this, TrainingActivity.class));
-                break;
 
             case R.id.health:
                 startActivity(new Intent(HomePageActivity.this, WeightCheck.class));
                 break;
 
-            case R.id.cityButton:
-                startActivity(new Intent(HomePageActivity.this, AddCity.class));
-                break;
-
-            case R.id.nutritionistButton:
-                startActivity(new Intent(HomePageActivity.this, AddNutritionist.class));
-                break;
         }
     }
 }

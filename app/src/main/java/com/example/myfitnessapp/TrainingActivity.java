@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class TrainingActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button button1, button2, back;
+    Button button1, button2, button3, back;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,6 +23,9 @@ public class TrainingActivity extends AppCompatActivity implements View.OnClickL
         button2 = (Button) findViewById(R.id.startTraining2);
         button2.setOnClickListener(this);
 
+        button3 = (Button) findViewById(R.id.startTraining3);
+        button3.setOnClickListener(this);
+
         back = (Button) findViewById(R.id.backToHome);
         back.setOnClickListener(this);
     }
@@ -34,16 +37,16 @@ public class TrainingActivity extends AppCompatActivity implements View.OnClickL
 
     }
 
-    public void after18(View view) {
+    public void during18(View view) {
 
-        Intent intent = new Intent(TrainingActivity.this, AdvancedTraining.class);
+        Intent intent = new Intent(TrainingActivity.this, MediumTraining.class);
         startActivity(intent);
 
     }
 
-    public void nutrition(View view) {
+    public void after18(View view) {
 
-        Intent intent = new Intent(TrainingActivity.this, NutritionActivity.class);
+        Intent intent = new Intent(TrainingActivity.this, AdvancedTraining.class);
         startActivity(intent);
 
     }
@@ -56,6 +59,10 @@ public class TrainingActivity extends AppCompatActivity implements View.OnClickL
                 break;
 
             case R.id.startTraining2:
+                startActivity(new Intent(TrainingActivity.this, MediumTraining.class));
+                break;
+
+            case R.id.startTraining3:
                 startActivity(new Intent(TrainingActivity.this, AdvancedTraining.class));
                 break;
 
