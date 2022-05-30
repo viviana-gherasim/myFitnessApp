@@ -23,7 +23,7 @@ public class ProfileNutritionist extends AppCompatActivity implements View.OnCli
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.profile_nutritionist);
+        setContentView(R.layout.fragment_booking_step2);
 
         back = (ImageView) findViewById(R.id.image_back);
         back.setOnClickListener(this);

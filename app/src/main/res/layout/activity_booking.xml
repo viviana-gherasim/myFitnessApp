@@ -21,7 +21,7 @@
         app:sv_selectedTextColor="@color/diaryColor"
         app:sv_textPadding="12dp" />
 
-    <androidx.viewpager.widget.ViewPager
+    <com.example.myfitnessapp.NonSwipeViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

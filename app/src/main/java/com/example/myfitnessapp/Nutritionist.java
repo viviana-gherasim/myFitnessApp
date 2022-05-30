@@ -1,10 +1,47 @@
 package com.example.myfitnessapp;
 
-public class Nutritionist {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Nutritionist implements Parcelable {
 
     public String nutritionist, email_addr, address, phone, city;
 
     public Nutritionist() {}
+
+    protected Nutritionist(Parcel in) {
+        nutritionist = in.readString();
+        email_addr = in.readString();
+        address = in.readString();
+        phone = in.readString();
+        city = in.readString();
+    }
+
+    public static final Creator<Nutritionist> CREATOR = new Creator<Nutritionist>() {
+        @Override
+        public Nutritionist createFromParcel(Parcel in) {
+            return new Nutritionist(in);
+        }
+
+        @Override
+        public Nutritionist[] newArray(int size) {
+            return new Nutritionist[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(nutritionist);
+        dest.writeString(email_addr);
+        dest.writeString(address);
+        dest.writeString(phone);
+        dest.writeString(city);
+    }
 
     public Nutritionist(String nutritionist, String email_addr, String address, String phone, String city) {
         this.nutritionist = nutritionist;

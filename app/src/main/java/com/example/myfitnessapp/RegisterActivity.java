@@ -135,8 +135,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful())
                         {
-                            User user=new User(email,password, height,weight,tWeight, day, month, year);
-
+                            User user = new User(email,password, height,weight,tWeight, day, month, year);
 
                             FirebaseDatabase.getInstance(" https://my-fitness-app-aa2ef-default-rtdb.europe-west1.firebasedatabase.app").getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())

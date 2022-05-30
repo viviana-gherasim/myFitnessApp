@@ -141,6 +141,9 @@
             android:name=".QuizMain">
         </activity>
 
+        <activity
+            android:name=".ProfileNutritionist">
+        </activity>
     </application>
 
 </manifest>

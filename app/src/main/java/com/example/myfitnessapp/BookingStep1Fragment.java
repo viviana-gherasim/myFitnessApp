@@ -1,6 +1,7 @@
 package com.example.myfitnessapp;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -46,6 +48,7 @@ public class BookingStep1Fragment extends Fragment implements AllCitiesLoadListe
 
     private Nutritionist nutritionist;
     private List<Nutritionist> nutritionistList = new ArrayList<Nutritionist>();
+    CardView cardView;
 
 
     ValueEventListener listener;
@@ -82,6 +85,7 @@ public class BookingStep1Fragment extends Fragment implements AllCitiesLoadListe
         branchLoadListener = this;
 
         dialog = new SpotsDialog.Builder().setContext(getActivity()).build();
+
     }
 
     @Nullable
@@ -96,6 +100,7 @@ public class BookingStep1Fragment extends Fragment implements AllCitiesLoadListe
 
         spinner = itemView.findViewById(R.id.spinner);
         recycler_city = itemView.findViewById(R.id.recycler_city);
+        cardView = itemView.findViewById(R.id.card_nutritionist);
 
         adapter1 = new MyNutritionistAdapter(getActivity(), nutritionistList);
         recycler_city.setAdapter(adapter1);
@@ -109,7 +114,6 @@ public class BookingStep1Fragment extends Fragment implements AllCitiesLoadListe
 
         return itemView;
     }
-
 
     private void initView() {
         recycler_city.setHasFixedSize(true);
@@ -204,11 +208,7 @@ public class BookingStep1Fragment extends Fragment implements AllCitiesLoadListe
 
     @Override
     public void onBranchLoadSuccess(List<Nutritionist> nutritionistList) {
-//        MyNutritionistAdapter adapter = new MyNutritionistAdapter(getActivity(), nutritionistList);
-//        recycler_city.setAdapter(adapter);
-//
-//        adapter.notifyDataSetChanged();
-//
+
          dialog.dismiss();
     }
 
@@ -217,4 +217,5 @@ public class BookingStep1Fragment extends Fragment implements AllCitiesLoadListe
         Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
         dialog.dismiss();
     }
+
 }
