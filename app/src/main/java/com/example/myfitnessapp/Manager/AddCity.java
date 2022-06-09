@@ -1,4 +1,4 @@
-package com.example.myfitnessapp;
+package com.example.myfitnessapp.Manager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.myfitnessapp.HomePageActivity;
+import com.example.myfitnessapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;

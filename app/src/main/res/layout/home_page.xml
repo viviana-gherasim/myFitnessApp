@@ -153,19 +153,19 @@
             <RelativeLayout
                 android:id="@+id/calendarHome"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="126dp"
                 android:background="@color/calendarColor">
 
                 <TextView
                     android:id="@+id/t4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Calendar"
-                    android:textSize="30sp"
-                    android:textColor="#fff"
-                    android:textStyle="bold"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginLeft="20dp"/>
+                    android:text="Calendar"
+                    android:textColor="#fff"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -188,48 +188,48 @@
         </androidx.cardview.widget.CardView>
 
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="353dp"
-            android:layout_height="120dp"
-            android:layout_margin="20dp"
-            app:cardCornerRadius="15dp">
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="353dp"-->
+<!--            android:layout_height="120dp"-->
+<!--            android:layout_margin="20dp"-->
+<!--            app:cardCornerRadius="15dp">-->
 
-            <RelativeLayout
-                android:id="@+id/pedometerHome"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/pedometerColor">
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/pedometerHome"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="@color/pedometerColor">-->
 
-                <TextView
-                    android:id="@+id/t6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Pedometer"
-                    android:textSize="30sp"
-                    android:textColor="#fff"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="20dp"/>
+<!--                <TextView-->
+<!--                    android:id="@+id/t6"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Pedometer"-->
+<!--                    android:textSize="30sp"-->
+<!--                    android:textColor="#fff"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:layout_marginLeft="20dp"/>-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/t6"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Step counter."
-                    android:textColor="#fff" />
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@+id/t6"-->
+<!--                    android:layout_marginLeft="20dp"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:text="Step counter."-->
+<!--                    android:textColor="#fff" />-->
 
-                <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="100dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/step_counter" />
+<!--                <ImageView-->
+<!--                    android:layout_width="120dp"-->
+<!--                    android:layout_height="100dp"-->
+<!--                    android:layout_alignParentRight="true"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:src="@drawable/step_counter" />-->
 
-            </RelativeLayout>
+<!--            </RelativeLayout>-->
 
-        </androidx.cardview.widget.CardView>
+<!--        </androidx.cardview.widget.CardView>-->
 
         <androidx.cardview.widget.CardView
             android:layout_width="353dp"
@@ -241,7 +241,7 @@
                 android:id="@+id/health"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/pedometerColor">
+                android:background="@color/colorPrimary">
 
                 <TextView
                     android:id="@+id/t7"

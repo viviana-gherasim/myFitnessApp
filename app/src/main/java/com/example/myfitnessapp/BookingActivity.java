@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.viewpager.widget.ViewPager;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.shuhart.stepview.StepView;
 
 import java.util.ArrayList;
@@ -26,6 +28,7 @@ import butterknife.OnClick;
 public class BookingActivity extends AppCompatActivity {
 
     LocalBroadcastManager localBroadcastManager;
+
 
     @BindView(R.id.step_view)  StepView stepView;
 
@@ -51,14 +54,38 @@ public class BookingActivity extends AppCompatActivity {
             if(Common.step == 1) {  //after choose nutritionist
                 BookingStep2Fragment.getInstance().updateUI();
             }
+            else
+                if(Common.step == 2) { //pick time slot
+                    loadTimeSlotOfNutritionist(Common.KEY_NUTRITIONIST);
+                }
+                else
+                    if(Common.step == 3) {      //confirm booking
+                        BookingStep4Fragment.getInstance().updateUI();
+                        confirmBooking();
+                    }
             viewPager.setCurrentItem(Common.step);
         }
     }
+
+    private void confirmBooking() {
+        Intent intent = new Intent(Common.KEY_CONFIRM_BOOKING);
+        localBroadcastManager.sendBroadcast(intent);
+    }
+
+    private void loadTimeSlotOfNutritionist(String keyNutritionist) {
+        Intent intent = new Intent(Common.KEY_DISPLAY_TIME_SLOT);
+        localBroadcastManager.sendBroadcast(intent);
+    }
+
 
     //Broadcast Receiver
     private BroadcastReceiver buttonNextReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
+            int step = intent.getIntExtra(Common.KEY_STEP, 0);
+            if(step == 2)
+                Common.currentNutritionist = intent.getParcelableExtra(Common.KEY_NUTRITIONIST_SELECTED);
+
             Common.currentNutritionist = intent.getParcelableExtra(Common.KEY_NUTRITIONIST);
             btn_next_step.setEnabled(true);
             setColorButton();

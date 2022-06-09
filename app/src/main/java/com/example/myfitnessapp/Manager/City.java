@@ -1,4 +1,4 @@
-package com.example.myfitnessapp;
+package com.example.myfitnessapp.Manager;
 
 public class City {
     public String name;

@@ -1,4 +1,4 @@
-package com.example.myfitnessapp;
+package com.example.myfitnessapp.Scanner;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.budiyev.android.codescanner.CodeScanner;
 import com.budiyev.android.codescanner.CodeScannerView;
 import com.budiyev.android.codescanner.DecodeCallback;
+import com.example.myfitnessapp.R;
+import com.example.myfitnessapp.SearchFoodBarcode;
 import com.google.zxing.Result;
 
 public class ScannerDiaryActivity extends AppCompatActivity {

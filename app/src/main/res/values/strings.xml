@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">myFitnessApp</string>
 
+    <string name="map_key" translatable="false">AIzaSyB_qsP8AOP_P0MdlPz-48TDaJYjTP3vbjo</string>
+
     <string-array name="array_food_categories">
         <item>Breakfast</item>
         <item>Lunch</item>

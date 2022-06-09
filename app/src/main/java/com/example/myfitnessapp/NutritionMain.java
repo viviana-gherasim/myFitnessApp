@@ -35,8 +35,8 @@ public class NutritionMain extends AppCompatActivity{
     private DatabaseReference databaseReference;
     private TextView t1;
     protected User user;
-    private CardView cardView1;
-    private Button chatBot, takeQuiz;
+    private CardView cardView1, chatBot, takeQuiz;
+    Button buttonBack;
 
 //    @BindView(R.id.card_view_booking)
 //    void booking() {
@@ -52,8 +52,9 @@ public class NutritionMain extends AppCompatActivity{
         t1 = (TextView) findViewById(R.id.email_user);  //email
         cardView1 = (CardView) findViewById(R.id.card_view_booking);
 
-        chatBot = (Button) findViewById(R.id.buttonChatBot);
-        takeQuiz = (Button) findViewById(R.id.buttonQuiz);
+        chatBot = (CardView) findViewById(R.id.buttonChatBot);
+        takeQuiz = (CardView) findViewById(R.id.buttonQuiz);
+        buttonBack = (Button) findViewById(R.id.buttonB);
 
         FirebaseUser userConnected = FirebaseAuth.getInstance().getCurrentUser();
         if(userConnected != null) {
@@ -79,13 +80,13 @@ public class NutritionMain extends AppCompatActivity{
             });
         }
 
-        ImageSlider imageSlider = findViewById(R.id.slider);
-
-        List<SlideModel> slideModels = new ArrayList<>();
-        slideModels.add(new SlideModel("https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/blogs/33996/images/Fe2A4oIS0aQnFu98xveA_Blog_Posts.png", "The foods"));
-        slideModels.add(new SlideModel("https://www.nhmrc.gov.au/sites/default/files/images/featured-image/Nutrition.jpg", "We choose"));
-        slideModels.add(new SlideModel("https://assets.sweat.com/html_body_blocks/images/000/009/927/original/NutritionDefinition_enb9d1cc7ac2e4031aec72392988db7d86.jpg?1538607034", "Make a difference "));
-        imageSlider.setImageList(slideModels, true);
+//        ImageSlider imageSlider = findViewById(R.id.slider);
+//
+//        List<SlideModel> slideModels = new ArrayList<>();
+//        slideModels.add(new SlideModel("https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/blogs/33996/images/Fe2A4oIS0aQnFu98xveA_Blog_Posts.png", "The foods"));
+//        slideModels.add(new SlideModel("https://www.nhmrc.gov.au/sites/default/files/images/featured-image/Nutrition.jpg", "We choose"));
+//        slideModels.add(new SlideModel("https://assets.sweat.com/html_body_blocks/images/000/009/927/original/NutritionDefinition_enb9d1cc7ac2e4031aec72392988db7d86.jpg?1538607034", "Make a difference "));
+//        imageSlider.setImageList(slideModels, true);
 
         cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,6 +106,13 @@ public class NutritionMain extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(NutritionMain.this, QuizMain.class));
+            }
+        });
+
+        buttonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(NutritionMain.this, WeightCheck.class));
             }
         });
     }

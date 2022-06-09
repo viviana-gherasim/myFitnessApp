@@ -4,7 +4,7 @@
     android:layout_height="fill_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:context=".MediumTraining">
+    tools:context=".Training.MediumTraining">
 
     <LinearLayout
         android:layout_width="fill_parent"

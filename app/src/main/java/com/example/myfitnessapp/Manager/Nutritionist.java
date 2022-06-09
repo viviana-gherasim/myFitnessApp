@@ -1,4 +1,4 @@
-package com.example.myfitnessapp;
+package com.example.myfitnessapp.Manager;
 
 import android.os.Parcel;
 import android.os.Parcelable;

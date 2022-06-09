@@ -1,4 +1,4 @@
-package com.example.myfitnessapp;
+package com.example.myfitnessapp.Manager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,9 @@ import android.widget.RelativeLayout;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.myfitnessapp.MainActivity;
+import com.example.myfitnessapp.R;
 
 public class ManagerActivity extends AppCompatActivity implements View.OnClickListener {
 

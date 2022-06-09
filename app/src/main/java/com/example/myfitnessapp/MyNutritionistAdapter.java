@@ -2,7 +2,6 @@ package com.example.myfitnessapp;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.myfitnessapp.Manager.Nutritionist;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,6 +65,7 @@ public class MyNutritionistAdapter extends RecyclerView.Adapter<MyNutritionistAd
                 //send Broadcast to tell Booking Activity enable button NEXT
                 Intent intent = new Intent(Common.KEY_ENABLE_BUTTON_NEXT);
                 intent.putExtra(Common.KEY_NUTRITIONIST, nutritionistList.get(pos));
+                intent.putExtra(Common.KEY_STEP, 2);
                 localBroadcastManager.sendBroadcast(intent);
             }
         });

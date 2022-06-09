@@ -8,6 +8,9 @@
     <uses-feature android:name="android.hardware.camera.autofocus"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,6 +18,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFitnessApp">
+
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key"/>
+
         <activity
             android:name=".NutritionMain"
             android:exported="true">
@@ -50,7 +57,7 @@
         </activity>
 
         <activity
-            android:name=".ScannerActivity">
+            android:name=".Scanner.ScannerActivity">
         </activity>
 
         <activity
@@ -70,7 +77,7 @@
         </activity>
 
         <activity
-            android:name=".ScannerDiaryActivity">
+            android:name=".Scanner.ScannerDiaryActivity">
         </activity>
 
         <activity
@@ -82,31 +89,31 @@
         </activity>
 
         <activity
-            android:name=".TrainingActivity">
+            android:name=".Training.TrainingActivity">
         </activity>
 
         <activity
-            android:name=".BeginnerTraining">
+            android:name=".Training.BeginnerTraining">
         </activity>
 
         <activity
-            android:name=".MediumTraining">
+            android:name=".Training.MediumTraining">
         </activity>
 
         <activity
-            android:name=".AdvancedTraining">
+            android:name=".Training.AdvancedTraining">
         </activity>
 
         <activity
-            android:name=".ExerciseBeginner">
+            android:name=".Training.ExerciseBeginner">
         </activity>
 
         <activity
-            android:name=".ExerciseMedium">
+            android:name=".Training.ExerciseMedium">
         </activity>
 
         <activity
-            android:name=".ExerciseAdvanced">
+            android:name=".Training.ExerciseAdvanced">
         </activity>
 
         <activity
@@ -114,7 +121,7 @@
         </activity>
 
         <activity
-            android:name=".ManagerActivity">
+            android:name=".Manager.ManagerActivity">
         </activity>
 
 <!--        <activity-->
@@ -126,11 +133,11 @@
         </activity>
 
         <activity
-            android:name=".AddCity">
+            android:name=".Manager.AddCity">
         </activity>
 
         <activity
-            android:name=".AddNutritionist">
+            android:name=".Manager.AddNutritionist">
         </activity>
 
         <activity

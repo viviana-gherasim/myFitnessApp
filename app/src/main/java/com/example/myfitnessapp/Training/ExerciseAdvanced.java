@@ -1,4 +1,4 @@
-package com.example.myfitnessapp;
+package com.example.myfitnessapp.Training;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ExerciseMedium extends AppCompatActivity {
+import com.example.myfitnessapp.R;
+
+public class ExerciseAdvanced extends AppCompatActivity {
 
     String buttonValue;
     Button startButton;
@@ -32,63 +34,63 @@ public class ExerciseMedium extends AppCompatActivity {
         switch (intvalue) {
 
             case 1:
-                setContentView(R.layout.activity_flutter_kick);
+                setContentView(R.layout.activity_pilates);
                 break;
 
             case 2:
-                setContentView(R.layout.activity_booty_squeeze);
+                setContentView(R.layout.activity_diamond_kicks);
                 break;
 
             case 3:
-                setContentView(R.layout.activity_dumbbell_swing);
-                break;
-
-            case 4:
-                setContentView(R.layout.activity_wall_sit);
-                break;
-
-            case 5:
-                setContentView(R.layout.activity_double_pulse_squat);
-                break;
-
-            case 6:
                 setContentView(R.layout.activity_deadlift_upright);
                 break;
 
-            case 7:
-                setContentView(R.layout.activity_squat_curl);
+            case 4:
+                setContentView(R.layout.activity_flutter_kick);
                 break;
 
-            case 8:
-                setContentView(R.layout.activity_dumbbell_bendover);
-                break;
-
-            case 9:
-                setContentView(R.layout.activity_inner_thigh_lifts);
-                break;
-
-            case 10:
-                setContentView(R.layout.activity_wall_bridge);
-                break;
-
-            case 11:
-                setContentView(R.layout.activity_plank_hipdips);
-                break;
-
-            case 12:
+            case 5:
                 setContentView(R.layout.activity_bicycle_crunch);
                 break;
 
-            case 13:
-                setContentView(R.layout.activity_v_sit);
+            case 6:
+                setContentView(R.layout.activity_inner_thigh_lifts);
                 break;
 
-            case 14:
+            case 7:
                 setContentView(R.layout.activity_climbers);
                 break;
 
-            case 15:
+            case 8:
+                setContentView(R.layout.activity_side_leg_lifts);
+                break;
+
+            case 9:
+                setContentView(R.layout.activity_squat_curl);
+                break;
+
+            case 10:
+                setContentView(R.layout.activity_v_sit);
+                break;
+
+            case 11:
+                setContentView(R.layout.activity_wall_bridge);
+                break;
+
+            case 12:
+                setContentView(R.layout.activity_reverse_crunch);
+                break;
+
+            case 13:
+                setContentView(R.layout.activity_booty_squeeze);
+                break;
+
+            case 14:
                 setContentView(R.layout.activity_lunge_back);
+                break;
+
+            case 15:
+                setContentView(R.layout.activity_plank_hipdips);
                 break;
 
         }
@@ -136,14 +138,14 @@ public class ExerciseMedium extends AppCompatActivity {
             public void onFinish() {
                 int newValue = Integer.valueOf(buttonValue)+1;
                 if(newValue <= 7) {
-                    Intent intent = new Intent(ExerciseMedium.this, ExerciseMedium.class);
+                    Intent intent = new Intent(ExerciseAdvanced.this, ExerciseAdvanced.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     intent.putExtra("value", String.valueOf(newValue));
                     startActivity(intent);
                 }
                 else {
                     newValue = 1;
-                    Intent intent = new Intent(ExerciseMedium.this, ExerciseMedium.class);
+                    Intent intent = new Intent(ExerciseAdvanced.this, ExerciseAdvanced.class);
                     intent.addFlags(Intent .FLAG_ACTIVITY_CLEAR_TASK);
                     intent.putExtra("value", String.valueOf(newValue));
                     startActivity(intent);

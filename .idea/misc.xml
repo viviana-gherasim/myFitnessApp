@@ -5,12 +5,16 @@
       <map>
         <entry key="..\:/Users/vivia/.gradle/caches/transforms-3/919b1e91a07ddbf34272a620f8cba519/transformed/core-1.7.0/res/layout/custom_dialog.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/drawable/backgroundcrop.xml" value="0.2712820512820513" />
+        <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/drawable/bg_round.xml" value="0.2712820512820513" />
+        <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/drawable/ic_baseline_keyboard_arrow_right_24.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/drawable/ic_booking.xml" value="0.26851851851851855" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/drawable/ic_email.xml" value="0.2712820512820513" />
+        <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/drawable/ic_lock.xml" value="0.2712820512820513" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/drawable/ic_wave.xml" value="0.2712820512820513" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/drawable/round_border.xml" value="0.2712820512820513" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/drawable/round_button.xml" value="0.2712820512820513" />
+        <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/drawable/rounded_dialog.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/activity_bicycle_crunch.xml" value="0.18659420289855072" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/activity_booking.xml" value="0.1759656652360515" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/activity_booty_squeeze.xml" value="0.21965579710144928" />
@@ -54,15 +58,17 @@
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/fragment_booking_step1.xml" value="0.21603260869565216" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/fragment_booking_step2.xml" value="0.21603260869565216" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/fragment_booking_step3.xml" value="0.21603260869565216" />
-        <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/fragment_booking_step4.xml" value="0.21603260869565216" />
+        <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/fragment_booking_step4.xml" value="0.264" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/health_form.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/history.xml" value="0.21422101449275363" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/history_screen.xml" value="0.21422101449275363" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/home_page.xml" value="0.264" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/layout_card.xml" value="0.21557971014492755" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/layout_nutritionist.xml" value="0.18385416666666668" />
+        <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/layout_time_slot.xml" value="0.21467391304347827" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/login.xml" value="0.264" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/manager_layout.xml" value="0.2269021739130435" />
+        <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/map_layout.xml" value="0.20923913043478262" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/medium_training.xml" value="0.23143115942028986" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/nutrition_and_tips.xml" value="0.20969202898550723" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/nutrition_home.xml" value="0.21603260869565216" />
@@ -72,12 +78,13 @@
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/pedometer.xml" value="0.23052536231884058" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/pedometer_main.xml" value="0.23550724637681159" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/pick_date.xml" value="0.264" />
-        <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/profile.xml" value="0.2" />
+        <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/profile.xml" value="0.264" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/profile_nutritionist.xml" value="0.264" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/quiz_main.xml" value="0.23550724637681159" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/register.xml" value="0.264" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/round_button.xml" value="0.18659420289855072" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/rounded_button.xml" value="0.18659420289855072" />
+        <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/rounded_dialog.xml" value="0.21422101449275363" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/score_bottom_sheet.xml" value="0.23550724637681159" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/search_food.xml" value="0.21557971014492755" />
         <entry key="..\:/Users/vivia/AndroidStudioProjects/myFitnessApp/app/src/main/res/layout/search_food_by_barcode.xml" value="0.264" />

@@ -1,4 +1,4 @@
-package com.example.myfitnessapp;
+package com.example.myfitnessapp.Training;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.widget.Button;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.myfitnessapp.R;
 
 public class BeginnerTraining extends AppCompatActivity implements View.OnClickListener{
 

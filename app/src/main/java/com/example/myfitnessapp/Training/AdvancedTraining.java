@@ -1,4 +1,4 @@
-package com.example.myfitnessapp;
+package com.example.myfitnessapp.Training;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,9 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MediumTraining extends AppCompatActivity implements View.OnClickListener{
+import com.example.myfitnessapp.R;
+
+public class AdvancedTraining extends AppCompatActivity implements View.OnClickListener {
 
     private Button back;
     int [] newArray;
@@ -17,23 +19,22 @@ public class MediumTraining extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.medium_training);
+        setContentView(R.layout.advanced_training);
 
         back = (Button) findViewById(R.id.backToTrainingActivity);
         back.setOnClickListener(this);
 
         newArray = new int[] {
-                R.id.position1, R.id.position2, R.id.position3, R.id.position4, R.id.position5, R.id.position6, R.id.position7, R.id.position8, R.id.position9, R.id.position10, R.id.position11, R.id.position12, R.id.position13, R.id.position14,  R.id.position15,
+                R.id.poz1, R.id.poz2, R.id.poz3, R.id.poz4, R.id.poz5, R.id.poz6, R.id.poz7, R.id.poz8, R.id.poz9, R.id.poz10, R.id.poz11, R.id.poz12, R.id.poz13, R.id.poz14, R.id.poz15,
         };
     }
-
     public void ImageButtonClicked(View view) {
 
         for(int i=0; i< newArray.length; i++) {
             if(view.getId() == newArray[i]) {
                 int value = i+1;
                 Log.i("First", String.valueOf(value));
-                Intent intent = new Intent(MediumTraining.this, ExerciseMedium.class);
+                Intent intent = new Intent(AdvancedTraining.this, ExerciseAdvanced.class);
                 intent.putExtra("value", String.valueOf(value));
                 startActivity(intent);
             }
@@ -44,10 +45,6 @@ public class MediumTraining extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.backToTrainingActivity:
-                startActivity(new Intent(MediumTraining.this, TrainingActivity.class));
-                break;
-        }
+
     }
 }

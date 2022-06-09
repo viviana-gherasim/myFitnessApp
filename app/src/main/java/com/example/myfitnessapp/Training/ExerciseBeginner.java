@@ -1,4 +1,4 @@
-package com.example.myfitnessapp;
+package com.example.myfitnessapp.Training;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ExerciseAdvanced extends AppCompatActivity {
+import com.example.myfitnessapp.R;
+
+public class ExerciseBeginner extends AppCompatActivity{
 
     String buttonValue;
     Button startButton;
@@ -22,7 +24,7 @@ public class ExerciseAdvanced extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.exercise_advanced);
+        setContentView(R.layout.exercise_beginner);
 
         Intent intent = getIntent();
         buttonValue = intent.getStringExtra("value");
@@ -32,63 +34,43 @@ public class ExerciseAdvanced extends AppCompatActivity {
         switch (intvalue) {
 
             case 1:
-                setContentView(R.layout.activity_pilates);
-                break;
-
-            case 2:
-                setContentView(R.layout.activity_diamond_kicks);
-                break;
-
-            case 3:
-                setContentView(R.layout.activity_deadlift_upright);
-                break;
-
-            case 4:
-                setContentView(R.layout.activity_flutter_kick);
-                break;
-
-            case 5:
-                setContentView(R.layout.activity_bicycle_crunch);
-                break;
-
-            case 6:
-                setContentView(R.layout.activity_inner_thigh_lifts);
-                break;
-
-            case 7:
                 setContentView(R.layout.activity_climbers);
                 break;
 
-            case 8:
-                setContentView(R.layout.activity_side_leg_lifts);
-                break;
-
-            case 9:
-                setContentView(R.layout.activity_squat_curl);
-                break;
-
-            case 10:
-                setContentView(R.layout.activity_v_sit);
-                break;
-
-            case 11:
-                setContentView(R.layout.activity_wall_bridge);
-                break;
-
-            case 12:
+            case 2:
                 setContentView(R.layout.activity_reverse_crunch);
                 break;
 
-            case 13:
-                setContentView(R.layout.activity_booty_squeeze);
+            case 3:
+               setContentView(R.layout.activity_bicycle_crunch);
+               break;
+
+            case 4:
+                setContentView(R.layout.activity_side_leg_lifts);
                 break;
 
-            case 14:
+            case 5:
+                setContentView(R.layout.activity_diamond_kicks);
+                break;
+
+            case 6:
                 setContentView(R.layout.activity_lunge_back);
                 break;
 
-            case 15:
+            case 7:
                 setContentView(R.layout.activity_plank_hipdips);
+                break;
+
+            case 8:
+                setContentView(R.layout.activity_seated_knee);
+                break;
+
+            case 9:
+                setContentView(R.layout.activity_v_sit);
+                break;
+
+            case 10:
+                setContentView(R.layout.activity_pilates);
                 break;
 
         }
@@ -108,6 +90,7 @@ public class ExerciseAdvanced extends AppCompatActivity {
                 }
             }
         });
+
     }
 
     private void stopTimer() {
@@ -136,14 +119,14 @@ public class ExerciseAdvanced extends AppCompatActivity {
             public void onFinish() {
                 int newValue = Integer.valueOf(buttonValue)+1;
                 if(newValue <= 7) {
-                    Intent intent = new Intent(ExerciseAdvanced.this, ExerciseAdvanced.class);
+                    Intent intent = new Intent(ExerciseBeginner.this, ExerciseBeginner.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     intent.putExtra("value", String.valueOf(newValue));
                     startActivity(intent);
                 }
                 else {
                     newValue = 1;
-                    Intent intent = new Intent(ExerciseAdvanced.this, ExerciseAdvanced.class);
+                    Intent intent = new Intent(ExerciseBeginner.this, ExerciseBeginner.class);
                     intent.addFlags(Intent .FLAG_ACTIVITY_CLEAR_TASK);
                     intent.putExtra("value", String.valueOf(newValue));
                     startActivity(intent);
@@ -161,7 +144,7 @@ public class ExerciseAdvanced extends AppCompatActivity {
 
         String timeLeftText = " ";
         if(minutes<10)
-            timeLeftText="0";
+                timeLeftText="0";
         timeLeftText = timeLeftText + minutes + " ";
         if(seconds<10)
             timeLeftText+= "0";

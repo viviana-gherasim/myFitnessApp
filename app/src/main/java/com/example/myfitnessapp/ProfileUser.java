@@ -93,7 +93,6 @@ public class ProfileUser extends AppCompatActivity implements View.OnClickListen
                 public void onClick(View v) {
                     int _WEIGHT = Integer.parseInt(t6.getText().toString());
                     int _TARGETWEIGHT = Integer.parseInt(t7.getText().toString());
-                    //String key = databaseReference.child("Users").push().getKey();
 
                     HashMap hashMap = new HashMap();
                     hashMap.put("weight", _WEIGHT);

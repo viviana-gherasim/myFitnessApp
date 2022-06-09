@@ -30,13 +30,14 @@
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:background="@color/profileColor"
-            android:padding="20dp">
+            android:padding="10dp">
 
             <ImageView
                 android:id="@+id/image_profile"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
                 android:src="@drawable/user" />
 
             <TextView
@@ -60,22 +61,24 @@
                 android:id="@+id/textView13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginStart="35dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="35dp"
                 android:text="Email"
-                android:textSize="20dp"/>
+                android:textColor="#000"
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/textView18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="100dp"
+                android:layout_marginStart="95dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="24dp"
                 android:layout_toEndOf="@+id/textView13"
                 android:inputType="textEmailAddress"
                 android:text="TextView"
+                android:textColor="#000"
                 android:textSize="18dp"
                 android:visibility="visible" />
 
@@ -90,9 +93,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="35dp"
-                android:layout_marginBottom="34dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="34dp"
                 android:text="Date of birth"
+                android:textColor="#000"
                 android:textSize="20dp" />
 
             <TextView
@@ -101,9 +105,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="33dp"
                 android:layout_marginBottom="27dp"
+                android:layout_marginTop="10dp"
                 android:layout_toEndOf="@id/textView14"
                 android:ems="2"
                 android:text="TextView"
+                android:textColor="#000"
                 android:textSize="18dp"
                 android:visibility="visible" />
 
@@ -112,22 +118,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="27dp"
+                android:layout_marginTop="10dp"
                 android:layout_toEndOf="@id/textView19"
                 android:ems="2"
                 android:text="TextView"
+                android:textColor="#000"
                 android:textSize="18dp"
-                android:visibility="visible"/>
+                android:visibility="visible" />
 
             <TextView
                 android:id="@+id/textView27"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="27dp"
+                android:layout_marginTop="10dp"
                 android:layout_toEndOf="@id/textView26"
                 android:ems="3"
                 android:text="TextView"
+                android:textColor="#000"
                 android:textSize="18dp"
-                android:visibility="visible"/>
+                android:visibility="visible" />
 
         </RelativeLayout>
 
@@ -140,9 +150,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="35dp"
-                android:layout_marginBottom="33dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="33dp"
                 android:text="Height"
+                android:textColor="#000"
                 android:textSize="20dp" />
 
             <TextView
@@ -156,18 +167,20 @@
                 android:inputType="number"
                 android:text="TextView"
                 android:textSize="18dp"
-                android:visibility="visible"/>
+                android:textColor="#000"
+                android:visibility="visible" />
 
 
             <TextView
                 android:id="@+id/textView23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="39dp"
                 android:layout_toEndOf="@+id/textView20"
                 android:text="Cm"
+                android:textColor="#000"
                 android:textSize="18dp" />
 
 
@@ -182,9 +195,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="35dp"
-                android:layout_marginBottom="32dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="32dp"
                 android:text="Weight"
+                android:textColor="#000"
                 android:textSize="20dp" />
 
             <EditText
@@ -195,6 +209,7 @@
                 android:layout_marginBottom="36dp"
                 android:layout_toEndOf="@id/textView16"
                 android:inputType="number"
+
                 android:text="TextView"
                 android:textSize="18dp"
                 android:visibility="visible" />
@@ -203,12 +218,13 @@
                 android:id="@+id/textView24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="9dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="32dp"
                 android:layout_toEndOf="@id/textView21"
                 android:text="Kg"
-                android:textSize="18dp"/>
+                android:textColor="#000"
+                android:textSize="18dp" />
 
         </RelativeLayout>
 
@@ -221,9 +237,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="35dp"
-                android:layout_marginBottom="78dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="78dp"
                 android:text="Target Weight"
+                android:textColor="#000"
                 android:textSize="20dp" />
 
             <EditText
@@ -242,12 +259,13 @@
                 android:id="@+id/textView25"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="9dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="293dp"
+                android:layout_toEndOf="@id/textView22"
                 android:text="Kg"
-                android:textSize="18dp"
-                android:layout_toEndOf="@id/textView22"/>
+                android:textColor="#000"
+                android:textSize="18dp" />
 
 
             <Button

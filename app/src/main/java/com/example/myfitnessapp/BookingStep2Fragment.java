@@ -1,7 +1,8 @@
 package com.example.myfitnessapp;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,18 +10,14 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import com.example.myfitnessapp.Manager.Nutritionist;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -85,7 +82,23 @@ public class BookingStep2Fragment extends Fragment {
         addressNutritionist = itemView.findViewById(R.id.textView185);
         phoneNutritionist = itemView.findViewById(R.id.textView186);
 
+        phoneNutritionist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToPhone();
+            }
+        });
+
         return itemView;
     }
+
+    private void goToPhone() {
+        String p = phoneNutritionist.getText().toString();
+        Uri number = Uri.parse("tel:" + p);
+        Intent dial = new Intent(Intent.ACTION_DIAL);
+        dial.setData(number);
+        startActivity(dial);
+    }
+
 
 }

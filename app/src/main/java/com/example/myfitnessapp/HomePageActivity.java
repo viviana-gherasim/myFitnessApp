@@ -34,8 +34,8 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
         calendarHome = (RelativeLayout) findViewById(R.id.calendarHome);
         calendarHome.setOnClickListener(this);
 
-        pedometerHome = (RelativeLayout) findViewById(R.id.pedometerHome);
-        pedometerHome.setOnClickListener(this);
+//        pedometerHome = (RelativeLayout) findViewById(R.id.pedometerHome);
+//        pedometerHome.setOnClickListener(this);
 
         health = (RelativeLayout) findViewById(R.id.health);
         health.setOnClickListener(this);
@@ -60,7 +60,6 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
             case R.id.calendarHome:
                 startActivity(new Intent(HomePageActivity.this, Calendar.class));
                 break;
-
             case R.id.health:
                 startActivity(new Intent(HomePageActivity.this, WeightCheck.class));
                 break;
