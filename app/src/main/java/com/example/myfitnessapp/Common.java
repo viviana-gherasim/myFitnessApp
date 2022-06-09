@@ -2,6 +2,8 @@ package com.example.myfitnessapp;
 
 import com.example.myfitnessapp.Manager.Nutritionist;
 
+import java.util.Calendar;
+
 public class Common {
     public static final String KEY_ENABLE_BUTTON_NEXT = "ENABLE_BUTTON_NEXT";
     public static final String KEY_NUTRITIONIST = "NUTRITIONIST_SAVE";
@@ -10,8 +12,12 @@ public class Common {
     public static final String KEY_CONFIRM_BOOKING = "CONFIRM_BOOKING";
     public static final String KEY_NUTRITIONIST_SELECTED = "NUTRITIONIST_SELECTED";
     public static final String KEY_STEP = "STEP";
+    public static final Object DISABLE_TAG = "DISABLE";
+    public static final String KEY_TIME_SLOT = "TIME_SLOT";
     public static Nutritionist currentNutritionist;
     public static int step = 0;
+    public static int currentTimeSlot;
+    public static Calendar currentDate = Calendar.getInstance();
 
     public static String convertTimeSlotToString(int slot) {
         switch (slot) {

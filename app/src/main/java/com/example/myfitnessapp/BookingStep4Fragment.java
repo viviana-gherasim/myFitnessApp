@@ -20,6 +20,8 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.example.myfitnessapp.Manager.Nutritionist;
 
+import java.text.SimpleDateFormat;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -40,8 +42,25 @@ public class BookingStep4Fragment extends Fragment {
     @BindView(R.id.txt_city_name)
     TextView cityNutritionist;
 
+    @BindView(R.id.txt_booking_time_text)
+    TextView booking_slot;
+
     Unbinder unbinder;
     Button confirm;
+    SimpleDateFormat simpleDateFormat;
+
+    BroadcastReceiver confirmBookingReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            setData();
+        }
+    };
+
+    private void setData() {
+        booking_slot.setText(new StringBuilder(Common.convertTimeSlotToString(Common.currentTimeSlot))
+                .append(" at ")
+                .append(simpleDateFormat.format(Common.currentDate.getTime())));
+    }
 
     @OnClick(R.id.btnConfirm)
     void confirmBooking() {
@@ -66,8 +85,18 @@ public class BookingStep4Fragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+
+        localBroadcastManager = LocalBroadcastManager.getInstance(getContext());
+        localBroadcastManager.registerReceiver(confirmBookingReceiver, new IntentFilter(Common.KEY_CONFIRM_BOOKING));
+
     }
 
+    @Override
+    public void onDestroy() {
+        localBroadcastManager.unregisterReceiver(confirmBookingReceiver);
+        super.onDestroy();
+    }
 
     @Nullable
     @Override
@@ -80,6 +109,7 @@ public class BookingStep4Fragment extends Fragment {
         nameNutritionist = itemView.findViewById(R.id.txt_booking_nutritionist_text);
         addressNutritionist = itemView.findViewById(R.id.txt_address_name);
         cityNutritionist = itemView.findViewById(R.id.txt_city_name);
+        booking_slot = itemView.findViewById(R.id.txt_booking_time_text);
 
         confirm = (Button) itemView.findViewById(R.id.btnConfirm);
 

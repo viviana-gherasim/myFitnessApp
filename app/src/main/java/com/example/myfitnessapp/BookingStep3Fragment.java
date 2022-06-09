@@ -36,7 +36,6 @@ public class BookingStep3Fragment extends Fragment implements TimeSlotLoadListen
 
     Unbinder unbinder;
     LocalBroadcastManager localBroadcastManager;
-    Calendar selected_date;
 
     @BindView(R.id.recycler_time_slot)
     RecyclerView recycler_time_slot;
@@ -76,8 +75,6 @@ public class BookingStep3Fragment extends Fragment implements TimeSlotLoadListen
 
         simpleDateFormat = new SimpleDateFormat("dd_MM_yyyy");
 
-        selected_date = Calendar.getInstance();
-        selected_date.add(Calendar.DATE, 0 );   //init current date
     }
 
     @Override
@@ -123,8 +120,8 @@ public class BookingStep3Fragment extends Fragment implements TimeSlotLoadListen
         horizontalCalendar.setCalendarListener(new HorizontalCalendarListener() {
             @Override
             public void onDateSelected(Calendar date, int position) {
-                if(selected_date.getTimeInMillis() != date.getTimeInMillis()) {
-                    selected_date = date; //this code will not load again if you select new day same with day selected
+                if(Common.currentDate.getTimeInMillis() != date.getTimeInMillis()) {
+                    Common.currentDate = date; //this code will not load again if you select new day same with day selected
                     loadAvailableTimeSlotOfNutritionist(Common.KEY_NUTRITIONIST,
                             simpleDateFormat.format(date.getTime()));
                 }
@@ -133,7 +130,7 @@ public class BookingStep3Fragment extends Fragment implements TimeSlotLoadListen
     }
 
     private void loadAvailableTimeSlotOfNutritionist(String keyNutritionist, String bookDate) {
-
+        onTimeSlotLoadSuccess(new ArrayList<TimeSlot>());
     }
 
 

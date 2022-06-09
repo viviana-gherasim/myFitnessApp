@@ -60,6 +60,7 @@ public class BookingActivity extends AppCompatActivity {
                 }
                 else
                     if(Common.step == 3) {      //confirm booking
+                        if(Common.currentTimeSlot != -1)
                         BookingStep4Fragment.getInstance().updateUI();
                         confirmBooking();
                     }
@@ -85,6 +86,8 @@ public class BookingActivity extends AppCompatActivity {
             int step = intent.getIntExtra(Common.KEY_STEP, 0);
             if(step == 2)
                 Common.currentNutritionist = intent.getParcelableExtra(Common.KEY_NUTRITIONIST_SELECTED);
+            else if(step == 3)
+                Common.currentTimeSlot = intent.getIntExtra(Common.KEY_TIME_SLOT, -1);
 
             Common.currentNutritionist = intent.getParcelableExtra(Common.KEY_NUTRITIONIST);
             btn_next_step.setEnabled(true);
