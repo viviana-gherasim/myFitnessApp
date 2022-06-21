@@ -6,6 +6,7 @@ public class Food {
     public Food() {}
 
     public Food(String food, String brand, String barcode, String calories, String proteins, String carbs, String fats ) {
+
         this.food = food;
         this.brand = brand;
         this.barcode = barcode;

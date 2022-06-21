@@ -16,19 +16,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        register = (TextView) findViewById(R.id.button2);
+        register = findViewById(R.id.button2);
         register.setOnClickListener(this);
 
-        login = (TextView) findViewById(R.id.button);
+        login = findViewById(R.id.button);
         login.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch(v.getId()) {
+
             case R.id.button2:
                 startActivity(new Intent(this, RegisterActivity.class));
                 break;
+
             case R.id.button:
                 startActivity(new Intent(this, LoginActivity.class));
                 break;

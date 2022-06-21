@@ -4,7 +4,7 @@ public class User {
     private String email, password, day, month, year;
     private Long  weight, height, targetWeight;
 
-    public User() { }
+    public User() {}
 
     public User(String email, String password, Long weight, Long height, Long targetWeight, String day, String month, String year) {
         this.email=email;

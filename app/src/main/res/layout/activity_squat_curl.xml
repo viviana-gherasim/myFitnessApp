@@ -42,10 +42,9 @@
             <TextView
                 android:layout_width="305dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
+                android:layout_marginStart="75dp"
                 android:padding="7dp"
                 android:text="How to do this"
-                android:textAlignment="center"
                 android:textColor="#686060"
                 android:textSize="25sp"
                 android:textStyle="bold" />

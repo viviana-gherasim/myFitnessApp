@@ -49,7 +49,7 @@ public class AddCity extends AppCompatActivity implements View.OnClickListener {
                 addCityToDatabase();
 
             case R.id.backButton:
-                startActivity(new Intent(this, HomePageActivity.class));
+                startActivity(new Intent(this, ManagerActivity.class));
                 break;
         }
     }

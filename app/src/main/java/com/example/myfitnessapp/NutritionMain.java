@@ -36,7 +36,7 @@ public class NutritionMain extends AppCompatActivity{
     private TextView t1;
     protected User user;
     private CardView cardView1, chatBot, takeQuiz;
-    Button buttonBack;
+    Button buttonBack, buttonLogout;
 
 //    @BindView(R.id.card_view_booking)
 //    void booking() {
@@ -55,6 +55,7 @@ public class NutritionMain extends AppCompatActivity{
         chatBot = (CardView) findViewById(R.id.buttonChatBot);
         takeQuiz = (CardView) findViewById(R.id.buttonQuiz);
         buttonBack = (Button) findViewById(R.id.buttonB);
+        buttonLogout = (Button) findViewById(R.id.buttonL);
 
         FirebaseUser userConnected = FirebaseAuth.getInstance().getCurrentUser();
         if(userConnected != null) {
@@ -113,6 +114,13 @@ public class NutritionMain extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(NutritionMain.this, WeightCheck.class));
+            }
+        });
+
+        buttonLogout.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(NutritionMain.this, MainActivity.class));
             }
         });
     }

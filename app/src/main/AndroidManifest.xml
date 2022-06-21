@@ -23,7 +23,7 @@
             android:value="@string/map_key"/>
 
         <activity
-            android:name=".NutritionMain"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -124,9 +124,9 @@
             android:name=".Manager.ManagerActivity">
         </activity>
 
-<!--        <activity-->
-<!--            android:name=".NutritionMain">-->
-<!--        </activity>-->
+        <activity
+            android:name=".NutritionMain">
+        </activity>
 
         <activity
             android:name=".BookingActivity">

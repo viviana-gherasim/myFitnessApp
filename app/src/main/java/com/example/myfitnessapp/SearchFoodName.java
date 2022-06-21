@@ -39,17 +39,17 @@ public class SearchFoodName extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search_food_by_name);
 
-        back = (ImageView) findViewById(R.id.imageView2);
+        back = findViewById(R.id.imageView2);
         back.setOnClickListener(this);
 
-        add = (Button) findViewById(R.id.button14);
+        add = findViewById(R.id.button14);
         add.setOnClickListener(this);
 
-        foodName = (EditText) findViewById(R.id.editTextProductSearch);
+        foodName = findViewById(R.id.editTextProductSearch);
 
-        category = (Spinner) findViewById(R.id.spinnerFoodCategory);
+        category = findViewById(R.id.spinnerFoodCategory);
 
-        quantity = (EditText) findViewById(R.id.editTextQuantityName);
+        quantity = findViewById(R.id.editTextQuantityName);
 
     }
 
@@ -75,13 +75,13 @@ public class SearchFoodName extends AppCompatActivity implements View.OnClickLis
         String categorie = category.getSelectedItem().toString().trim();
 
         if(nume.isEmpty()) {
-            foodName.setError("Food name is required");
+            foodName.setError("Please enter food name!");
             foodName.requestFocus();
             return;
         }
 
         if(cantitate.isEmpty()) {
-            quantity.setError("Quantity in grams is required");
+            quantity.setError("Please enter quantity in grams!");
             quantity.requestFocus();
             return;
         }

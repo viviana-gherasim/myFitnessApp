@@ -308,6 +308,14 @@
                     android:layout_margin="10.0dp"
                     android:text="Get started"/>
 
+                <Button
+                    android:id="@+id/backToHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Back"/>
+
+
             </LinearLayout>
 
             <LinearLayout
@@ -315,19 +323,14 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <FrameLayout
-                    android:id="@+id/f1_Adplaceholder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+<!--                <FrameLayout-->
+<!--                    android:id="@+id/f1_Adplaceholder"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"/>-->
+
+
 
             </LinearLayout>
-
-            <Button
-                android:id="@+id/backToHome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Back"/>
 
 
         </LinearLayout>

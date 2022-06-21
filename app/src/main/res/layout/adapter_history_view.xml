@@ -7,7 +7,7 @@
 
     <TextView
         android:id="@+id/nameFoodHistory"
-        android:layout_width="170dp"
+        android:layout_width="wrap_content"
         android:layout_height="80dp"
         android:textColor="#000"
         android:text="TextView1"/>
@@ -15,8 +15,9 @@
 
     <TextView
         android:id="@+id/caloriesFoodHistory"
-        android:layout_width="240dp"
+        android:layout_width="wrap_content"
         android:layout_height="80dp"
         android:textColor="#000"
+        android:layout_marginStart="50dp"
         android:text="TextView2"/>
 </LinearLayout>

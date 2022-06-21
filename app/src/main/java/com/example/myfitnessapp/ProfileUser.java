@@ -38,26 +38,24 @@ public class ProfileUser extends AppCompatActivity implements View.OnClickListen
     private EditText t6, t7;
     protected User user;
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile);
 
-        back = (ImageView) findViewById(R.id.image_back);
+        back = findViewById(R.id.image_back);
         back.setOnClickListener(this);
 
-        btnUpdate = (Button) findViewById(R.id.button17);
+        btnUpdate = findViewById(R.id.button17);
         btnUpdate.setOnClickListener(this);
 
-        t1 = (TextView) findViewById(R.id.textView18);  //email
-        t2 = (TextView) findViewById(R.id.textView19);  //day
-        t3 = (TextView) findViewById(R.id.textView26);  //month
-        t4 = (TextView) findViewById(R.id.textView27);  //year
-        t5 = (TextView) findViewById(R.id.textView20);  //height
-        t6 = (EditText) findViewById(R.id.textView21);  //weight
-        t7 = (EditText) findViewById(R.id.textView22);  //target weight
-
+        t1 = findViewById(R.id.textView18);  //email
+        t2 = findViewById(R.id.textView19);  //day
+        t3 = findViewById(R.id.textView26);  //month
+        t4 = findViewById(R.id.textView27);  //year
+        t5 = findViewById(R.id.textView20);  //height
+        t6 = findViewById(R.id.textView21);  //weight
+        t7 = findViewById(R.id.textView22);  //target weight
 
         FirebaseUser userConnected = FirebaseAuth.getInstance().getCurrentUser();
         if(userConnected != null) {

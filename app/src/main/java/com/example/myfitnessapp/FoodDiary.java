@@ -3,9 +3,7 @@ package com.example.myfitnessapp;
 public class FoodDiary {
     private String email, day, month, year, quantity, foodName, category, brandName, calories, proteins, carbs, fats, barcode;
 
-    public FoodDiary() {
-
-    }
+    public FoodDiary() {}
 
     public FoodDiary(String email, String day, String month, String year, String quantity, String foodName, String category, String brandName, String calories, String proteins, String carbs, String fats, String barcode) {
         this.email = email;

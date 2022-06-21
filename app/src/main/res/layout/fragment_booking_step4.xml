@@ -6,11 +6,10 @@
     android:orientation="vertical">
 
     <ImageView
-        android:layout_width="250dp"
+        android:layout_width="230dp"
         android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/logo"
-        android:layout_marginTop="20dp"/>
+        android:src="@drawable/logo"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:textSize="18sp"
+            android:textSize="13sp"
             android:textColor="#000"
             android:layout_gravity="center_horizontal"
             android:textAllCaps="true" />
@@ -35,7 +34,7 @@
             android:textAllCaps="true"
             android:textStyle="bold"
             android:textColor="#000"
-            android:textSize="15dp"
+            android:textSize="13dp"
             android:layout_marginTop="10dp"/>
 
 
@@ -46,8 +45,8 @@
             android:layout_marginLeft="20dp">
 
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_gravity="bottom"
                 android:layout_marginTop="10dp"
                 android:src="@drawable/calendar" />
@@ -57,7 +56,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="20dp"
                 android:text="10:00 at 06/06/2022"
                 android:textColor="#000"
                 android:textSize="15sp" />
@@ -72,8 +71,8 @@
             android:layout_marginLeft="20dp">
 
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_gravity="bottom"
                 android:layout_marginTop="10dp"
                 android:src="@drawable/nutritionist" />
@@ -83,7 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="20dp"
                 android:text="David"
                 android:textColor="#000"
                 android:textSize="15sp" />
@@ -98,8 +97,8 @@
 
             <ImageView
                 android:src="@drawable/buildings"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_gravity="bottom"
                 android:layout_marginTop="10dp"/>
 
@@ -108,7 +107,7 @@
                 android:text="City #1"
                 android:textSize="15sp"
                 android:textColor="#000"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -123,8 +122,8 @@
 
             <ImageView
                 android:src="@drawable/map"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_gravity="bottom"
                 android:layout_marginTop="10dp"/>
 
@@ -133,19 +132,25 @@
                 android:text="Address"
                 android:textSize="15sp"
                 android:textColor="#000"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btnConfirm"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="CONFIRM"
-            android:layout_marginTop="20dp"/>
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnConfirm"
+                android:layout_width="110dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="100dp"
+                android:text="CONFIRM" />
+        </LinearLayout>
+
 
     </LinearLayout>
 

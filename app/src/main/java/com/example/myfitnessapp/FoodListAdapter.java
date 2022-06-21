@@ -18,6 +18,7 @@ public class FoodListAdapter extends ArrayAdapter<Food> {
 
     private Context mContext;
     int mRes;
+
     public FoodListAdapter(@NonNull Context context, int res, @NonNull ArrayList<Food> obj) {
         super(context, res, obj);
         mContext = context;
@@ -26,6 +27,7 @@ public class FoodListAdapter extends ArrayAdapter<Food> {
 
     @NonNull
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+
         String name = getItem(position).getFood();
         String brandName = getItem(position).getBrand();
         String barcode = getItem(position).getBarcode();
@@ -38,13 +40,13 @@ public class FoodListAdapter extends ArrayAdapter<Food> {
         LayoutInflater inflater = LayoutInflater.from(mContext);
         convertView = inflater.inflate(mRes, parent, false);
 
-        TextView tName = (TextView) convertView.findViewById(R.id.textView28);
-        TextView tBrand = (TextView) convertView.findViewById(R.id.textView36);
-        TextView tBarcode = (TextView) convertView.findViewById(R.id.textView37);
+        TextView textName = convertView.findViewById(R.id.textView28);
+        TextView textBrand = convertView.findViewById(R.id.textView36);
+        TextView textBarcode = convertView.findViewById(R.id.textView37);
 
-        tName.setText(name);
-        tBrand.setText(brandName);
-        tBarcode.setText(barcode);
+        textName.setText(name);
+        textBrand.setText(brandName);
+        textBarcode.setText(barcode);
 
         return convertView;
     }

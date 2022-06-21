@@ -84,14 +84,15 @@ public class BookingActivity extends AppCompatActivity {
         @Override
         public void onReceive(Context context, Intent intent) {
             int step = intent.getIntExtra(Common.KEY_STEP, 0);
-            if(step == 2)
-                Common.currentNutritionist = intent.getParcelableExtra(Common.KEY_NUTRITIONIST_SELECTED);
-            else if(step == 3)
+
+            if(step == 3)
                 Common.currentTimeSlot = intent.getIntExtra(Common.KEY_TIME_SLOT, -1);
 
-            Common.currentNutritionist = intent.getParcelableExtra(Common.KEY_NUTRITIONIST);
-            btn_next_step.setEnabled(true);
-            setColorButton();
+            if(step == 0) {
+                Common.currentNutritionist = intent.getParcelableExtra(Common.KEY_NUTRITIONIST);
+            }
+                btn_next_step.setEnabled(true);
+                setColorButton();
         }
     };
 

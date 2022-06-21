@@ -178,6 +178,7 @@ public class BookingStep1Fragment extends Fragment implements AllCitiesLoadListe
                         for (DataSnapshot d : snapshot.getChildren()) {
                             nutritionist = d.getValue(Nutritionist.class);
                             System.out.println(nutritionist);
+                            nutritionist.id = d.getKey();
                             nutritionistList.add(nutritionist);
                         }
                         adapter1.notifyDataSetChanged();

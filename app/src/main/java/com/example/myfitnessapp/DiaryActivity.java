@@ -29,11 +29,11 @@ public class DiaryActivity extends AppCompatActivity implements View.OnClickList
 
     private ImageView home, addBreakfast, addLunch, addDinner, addSnack;
     private ListView breakfastList, lunchList, dinnerList, snacksList;
-    private DatabaseReference databaseReference, databaseReferenceUsers;
-    private FirebaseDatabase database;
     protected FoodDiary foodDiary;
     protected User userApp;
     private TextView target, sum;
+    private DatabaseReference databaseReference, databaseReferenceUsers;
+    private FirebaseDatabase database;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,28 +45,28 @@ public class DiaryActivity extends AppCompatActivity implements View.OnClickList
         ArrayList<FoodDiary> dinnerArray = new ArrayList<>();
         ArrayList<FoodDiary> snacksArray = new ArrayList<>();
 
-        home = (ImageView) findViewById(R.id.backToHome);
-        home.setOnClickListener(this);
-
-        addBreakfast = (ImageView) findViewById(R.id.moreBreakfast);
+        addBreakfast = findViewById(R.id.moreBreakfast);
         addBreakfast.setOnClickListener(this);
 
-        addLunch = (ImageView) findViewById(R.id.moreLunch);
+        addLunch = findViewById(R.id.moreLunch);
         addLunch.setOnClickListener(this);
 
-        addDinner = (ImageView) findViewById(R.id.moreDinner);
+        addDinner = findViewById(R.id.moreDinner);
         addDinner.setOnClickListener(this);
 
-        addSnack = (ImageView) findViewById(R.id.moreSnacks);
+        addSnack = findViewById(R.id.moreSnacks);
         addSnack.setOnClickListener(this);
 
-        target = (TextView) findViewById(R.id.textViewTargetCalorii);
-        sum = (TextView) findViewById(R.id.textViewSumCalorii);
+        target = findViewById(R.id.textViewTargetCalorii);
+        sum = findViewById(R.id.textViewSumCalorii);
 
-        breakfastList = (ListView) findViewById(R.id.breakfastListView);
-        lunchList = (ListView) findViewById(R.id.lunchListView);
-        dinnerList = (ListView) findViewById(R.id.dinnerListView);
-        snacksList = (ListView) findViewById(R.id.snacksListView);
+        home = findViewById(R.id.backToHome);
+        home.setOnClickListener(this);
+
+        breakfastList = findViewById(R.id.breakfastListView);
+        lunchList = findViewById(R.id.lunchListView);
+        dinnerList = findViewById(R.id.dinnerListView);
+        snacksList = findViewById(R.id.snacksListView);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -76,24 +76,27 @@ public class DiaryActivity extends AppCompatActivity implements View.OnClickList
             database = FirebaseDatabase.getInstance("https://my-fitness-app-aa2ef-default-rtdb.europe-west1.firebasedatabase.app");
             databaseReference = database.getReference().child("Diary");
             databaseReference.addValueEventListener(new ValueEventListener() {
+
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     int sumaCalorii = 0;
                     int calorii = 0;
                     float fcalorii = 0;
+
                     for(DataSnapshot d: snapshot.getChildren()) {
+
                         Calendar calendar = Calendar.getInstance(TimeZone.getDefault());
                         int day = calendar.get(Calendar.DATE);
                         int month = calendar.get(Calendar.MONTH)+1;
                         int year = calendar.get(Calendar.YEAR);
 
-                        String strDay = String.valueOf(day);
-                        String strMonth = String.valueOf(month);
-                        String strYear = String.valueOf(year);
+                        String stringDay = String.valueOf(day);
+                        String stringMonth = String.valueOf(month);
+                        String stringYear = String.valueOf(year);
 
                         foodDiary = d.getValue(FoodDiary.class);
 
-                        if((foodDiary.getCategory().equals("Breakfast")) && (foodDiary.getDay().equals(strDay)) && (foodDiary.getMonth().equals(strMonth)) && (foodDiary.getYear().equals(strYear)) && (foodDiary.getEmail().equals(userEmail))) {
+                        if((foodDiary.getCategory().equals("Breakfast")) && (foodDiary.getDay().equals(stringDay)) && (foodDiary.getMonth().equals(stringMonth)) && (foodDiary.getYear().equals(stringYear)) && (foodDiary.getEmail().equals(userEmail))) {
 
                             breakfastArray.add(foodDiary);
                             fcalorii = Float.parseFloat(foodDiary.getCalories());
@@ -101,21 +104,21 @@ public class DiaryActivity extends AppCompatActivity implements View.OnClickList
                             sumaCalorii = sumaCalorii + calorii;
                         }
                         else
-                        if((foodDiary.getCategory().equals("Lunch")) && (foodDiary.getDay().equals(strDay)) && (foodDiary.getMonth().equals(strMonth)) && (foodDiary.getYear().equals(strYear)) && (foodDiary.getEmail().equals(userEmail))) {
+                        if((foodDiary.getCategory().equals("Lunch")) && (foodDiary.getDay().equals(stringDay)) && (foodDiary.getMonth().equals(stringMonth)) && (foodDiary.getYear().equals(stringYear)) && (foodDiary.getEmail().equals(userEmail))) {
                             lunchArray.add(foodDiary);
                             fcalorii = Float.parseFloat(foodDiary.getCalories());
                             calorii = (int) fcalorii;
                             sumaCalorii = sumaCalorii + calorii;
                         }
                         else
-                        if((foodDiary.getCategory().equals("Dinner")) && (foodDiary.getDay().equals(strDay)) && (foodDiary.getMonth().equals(strMonth)) && (foodDiary.getYear().equals(strYear)) && (foodDiary.getEmail().equals(userEmail))) {
+                        if((foodDiary.getCategory().equals("Dinner")) && (foodDiary.getDay().equals(stringDay)) && (foodDiary.getMonth().equals(stringMonth)) && (foodDiary.getYear().equals(stringYear)) && (foodDiary.getEmail().equals(userEmail))) {
                             dinnerArray.add(foodDiary);
                             fcalorii = Float.parseFloat(foodDiary.getCalories());
                             calorii = (int) fcalorii;
                             sumaCalorii = sumaCalorii + calorii;
                         }
                         else
-                        if((foodDiary.getCategory().equals("Snacks")) && (foodDiary.getDay().equals(strDay)) && (foodDiary.getMonth().equals(strMonth)) && (foodDiary.getYear().equals(strYear)) && (foodDiary.getEmail().equals(userEmail))) {
+                        if((foodDiary.getCategory().equals("Snacks")) && (foodDiary.getDay().equals(stringDay)) && (foodDiary.getMonth().equals(stringMonth)) && (foodDiary.getYear().equals(stringYear)) && (foodDiary.getEmail().equals(userEmail))) {
                             snacksArray.add(foodDiary);
                             fcalorii = Float.parseFloat(foodDiary.getCalories());
                             calorii = (int) fcalorii;
@@ -150,14 +153,15 @@ public class DiaryActivity extends AppCompatActivity implements View.OnClickList
             });
 
 
-            //target
             databaseReferenceUsers = database.getReference().child("Users");
             databaseReferenceUsers.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     for(DataSnapshot d:snapshot.getChildren()) {
                         userApp = d.getValue(User.class);
+
                         if(userApp.getEmail().equals(userEmail)) {
+
                             double BMR;
                             Calendar calendar = Calendar.getInstance(TimeZone.getDefault());
                             int year = calendar.get(Calendar.YEAR);
@@ -166,9 +170,10 @@ public class DiaryActivity extends AppCompatActivity implements View.OnClickList
                             int varsta = year - Integer.parseInt(userApp.getYear());
                             BMR = 88.362 + (13.397 * greutate) + (4.799 * inaltime) + (5.677 * varsta);
                             double caloriiTarget = BMR * 1.2;
-                            int iCaloriiTarget = (int)caloriiTarget;
-                            String strCaloriiTarget = String.valueOf(iCaloriiTarget);
-                            target.setText(strCaloriiTarget);
+                            int intCaloriiTarget = (int)caloriiTarget;
+                            String stringCaloriiTarget = String.valueOf(intCaloriiTarget);
+                            target.setText(stringCaloriiTarget);
+
                         }
                     }
                 }
@@ -185,9 +190,6 @@ public class DiaryActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         switch(v.getId()) {
-            case R.id.backToHome:
-                startActivity(new Intent(this, HomePageActivity.class));
-                break;
 
             case R.id.moreBreakfast:
                 startActivity(new Intent(this, SearchFoodActivity.class));
@@ -203,6 +205,10 @@ public class DiaryActivity extends AppCompatActivity implements View.OnClickList
 
             case R.id.moreSnacks:
                 startActivity(new Intent(this, SearchFoodActivity.class));
+                break;
+
+            case R.id.backToHome:
+                startActivity(new Intent(this, HomePageActivity.class));
                 break;
         }
     }

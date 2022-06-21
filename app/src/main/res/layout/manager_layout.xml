@@ -11,14 +11,14 @@
         android:layout_marginTop="100dp">
 
         <androidx.cardview.widget.CardView
-            android:layout_width="353dp"
+            android:layout_width="wrap_content"
             android:layout_height="120dp"
             android:layout_margin="20dp"
             app:cardCornerRadius="15dp">
 
             <RelativeLayout
                 android:id="@+id/addCity"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@color/calendarColor">
 
@@ -26,11 +26,11 @@
                     android:id="@+id/txt1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="5dp"
                     android:layout_marginTop="40dp"
                     android:text="Add City"
                     android:textColor="#fff"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
 
                 <ImageView
@@ -45,14 +45,14 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="353dp"
+            android:layout_width="wrap_content"
             android:layout_height="120dp"
             android:layout_margin="20dp"
             app:cardCornerRadius="15dp">
 
             <RelativeLayout
                 android:id="@+id/addNutritionist"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@color/calendarColor">
 
@@ -60,15 +60,15 @@
                     android:id="@+id/txt2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="5dp"
                     android:layout_marginTop="40dp"
                     android:text="Add Nutritionist"
                     android:textColor="#fff"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
 
                 <ImageView
-                    android:layout_width="120dp"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="10dp"
@@ -82,7 +82,7 @@
             android:id="@+id/logout"
             android:layout_width="277dp"
             android:layout_height="44dp"
-            android:layout_marginStart="64dp"
+            android:layout_marginStart="30dp"
             android:layout_marginBottom="56dp"
             android:layout_marginTop="100dp"
             android:background="@drawable/round_button"

@@ -3,9 +3,22 @@ package com.example.myfitnessapp.Manager;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.example.myfitnessapp.TimeSlot;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class Nutritionist implements Parcelable {
 
     public String nutritionist, email_addr, address, phone, city;
+    //public List<String> bookDate = new ArrayList<String>();
+    public Map<String, List<String>> bookDate = new HashMap<>();
+    public transient String id;
 
     public Nutritionist() {}
 
@@ -15,6 +28,22 @@ public class Nutritionist implements Parcelable {
         address = in.readString();
         phone = in.readString();
         city = in.readString();
+        //bookDate = in.createStringArrayList();
+        id = in.readString();
+        int size = in.readInt();
+        
+        for(int i = 0; i< size; i++) {
+            String key = in.readString();
+            int valSize = in.readInt();
+            List<String> newList = new ArrayList<>();
+            for(int j =0; j < valSize; j++) {
+                String value = in.readString();
+                newList.add(value);
+            }
+
+            bookDate.put(key, newList);
+        }
+
     }
 
     public static final Creator<Nutritionist> CREATOR = new Creator<Nutritionist>() {
@@ -41,6 +70,19 @@ public class Nutritionist implements Parcelable {
         dest.writeString(address);
         dest.writeString(phone);
         dest.writeString(city);
+        //dest.writeStringList(bookDate);
+        dest.writeString(id);
+
+        dest.writeInt(bookDate.size());
+        for(Map.Entry<String, List<String>> entry : bookDate.entrySet()) {
+            dest.writeString(entry.getKey());
+            dest.writeInt(entry.getValue().size());
+            for (String value: entry.getValue()
+                 ) {
+                dest.writeString(value);
+                
+            }
+        }
     }
 
     public Nutritionist(String nutritionist, String email_addr, String address, String phone, String city) {
@@ -71,4 +113,12 @@ public class Nutritionist implements Parcelable {
 
     public void setCity(String city) { this.city = city; }
 
+//    public List<String> getBookDate() { return bookDate; }
+//
+//    public void setBookDate(List<String> bookDate) { this.bookDate = bookDate; }
+
+
+    public Map<String, List<String>> getBookDate() {
+        return bookDate;
+    }
 }

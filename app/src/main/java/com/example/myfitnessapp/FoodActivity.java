@@ -34,13 +34,14 @@ public class FoodActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.food);
 
-        back = (ImageView) findViewById(R.id.backToHomePage);
+        back = findViewById(R.id.backToHomePage);
         back.setOnClickListener(this);
 
-        add = (Button) findViewById(R.id.addFoodButton);
+        add = findViewById(R.id.addFoodButton);
         add.setOnClickListener(this);
 
-        foodList = (ListView) findViewById(R.id.foodListView);
+        foodList = findViewById(R.id.foodListView);
+
         database = FirebaseDatabase.getInstance("https://my-fitness-app-aa2ef-default-rtdb.europe-west1.firebasedatabase.app");
         databaseReference=database.getReference().child("Food");
 
@@ -51,6 +52,7 @@ public class FoodActivity extends AppCompatActivity implements View.OnClickListe
                     food = d.getValue(Food.class);
                     foodArray.add(food);
                 }
+
                 FoodListAdapter adapter = new FoodListAdapter(FoodActivity.this, R.layout.adapter_food_view,foodArray);
                 foodList.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
@@ -61,7 +63,6 @@ public class FoodActivity extends AppCompatActivity implements View.OnClickListe
 
             }
         });
-
     }
 
     @Override

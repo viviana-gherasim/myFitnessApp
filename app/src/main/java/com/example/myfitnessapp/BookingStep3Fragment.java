@@ -17,11 +17,25 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myfitnessapp.Manager.Nutritionist;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+
 import java.sql.Time;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -44,6 +58,9 @@ public class BookingStep3Fragment extends Fragment implements TimeSlotLoadListen
     HorizontalCalendarView calendarView;
 
     SimpleDateFormat simpleDateFormat;
+
+    DatabaseReference databaseReference;
+    FirebaseDatabase database;
 
     BroadcastReceiver displayTimeSlot = new BroadcastReceiver() {
         @Override
@@ -110,6 +127,9 @@ public class BookingStep3Fragment extends Fragment implements TimeSlotLoadListen
         Calendar endDate = Calendar.getInstance();
         endDate.add(Calendar.DATE, 2 );     //2 day left
 
+        Calendar beforeDate = Calendar.getInstance();
+        beforeDate.add(Calendar.DATE, 2);
+
         HorizontalCalendar horizontalCalendar = new HorizontalCalendar.Builder(itemView, R.id.calendarView)
                 .range(startDate, endDate)
                 .datesNumberOnScreen(1)
@@ -121,7 +141,7 @@ public class BookingStep3Fragment extends Fragment implements TimeSlotLoadListen
             @Override
             public void onDateSelected(Calendar date, int position) {
                 if(Common.currentDate.getTimeInMillis() != date.getTimeInMillis()) {
-                    Common.currentDate = date; //this code will not load again if you select new day same with day selected
+                    Common.currentDate = date;
                     loadAvailableTimeSlotOfNutritionist(Common.KEY_NUTRITIONIST,
                             simpleDateFormat.format(date.getTime()));
                 }
@@ -131,8 +151,81 @@ public class BookingStep3Fragment extends Fragment implements TimeSlotLoadListen
 
     private void loadAvailableTimeSlotOfNutritionist(String keyNutritionist, String bookDate) {
         onTimeSlotLoadSuccess(new ArrayList<TimeSlot>());
-    }
 
+        String nutritionistName = Common.currentNutritionist.getNutritionist();
+        String nutritionistAddress = Common.currentNutritionist.getAddress();
+        String nutritionistEmail = Common.currentNutritionist.getEmail_addr();
+        String nutritionistPhone = Common.currentNutritionist.getPhone();
+        String nutritionistCity = Common.currentNutritionist.getCity();
+
+
+        database = FirebaseDatabase.getInstance("https://my-fitness-app-aa2ef-default-rtdb.europe-west1.firebasedatabase.app");
+        databaseReference = database.getReference().child("City");
+
+        Query cityByNameQuery = databaseReference.orderByChild("name").equalTo(nutritionistCity);
+
+        cityByNameQuery.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                String id = snapshot.getKey();
+                Nutritionist nutritionist = new Nutritionist(nutritionistName, nutritionistEmail, nutritionistAddress, nutritionistPhone, nutritionistCity);
+
+                DatabaseReference newRef = databaseReference.child(id).child("Nutritionists").child(Common.currentNutritionist.id);
+
+                newRef.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DataSnapshot> task) {
+                        if(task.isSuccessful()) {
+                            List<TimeSlot> timeSlots = new ArrayList<>();
+                            Nutritionist nutritionist = task.getResult().getValue(Nutritionist.class);
+                            System.out.println(id);
+                            Map<String, List<String>> bookDates = nutritionist.getBookDate();
+                            List<String> dateList = bookDates.get(Common.returnBookDate(Common.currentDate.getTime()));
+                            if(dateList != null) {
+
+                                for (String bookDate : dateList) {
+                                    TimeSlot timeSlot = new TimeSlot();
+                                    timeSlot.setSlot(Long.valueOf(bookDate));
+                                    timeSlots.add(timeSlot);
+                                }
+                                timeSlotLoadListener.onTimeSlotLoadSuccess(timeSlots);
+                            }
+                        }
+                        else {
+
+                        }
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        timeSlotLoadListener.onTimeSlotLoadFailed(e.getMessage());
+                    }
+                });
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+    }
 
     @Override
     public void onTimeSlotLoadSuccess(List<TimeSlot> timeSlotList) {
@@ -148,8 +241,8 @@ public class BookingStep3Fragment extends Fragment implements TimeSlotLoadListen
 
     @Override
     public void onTimeSlotLoadEmpty() {
-//        MyTimeSlotAdapter adapter = new MyTimeSlotAdapter(getContext());
-//        recycler_time_slot.setAdapter(adapter);
+        MyTimeSlotAdapter adapter = new MyTimeSlotAdapter(getContext());
+        recycler_time_slot.setAdapter(adapter);
     }
 }
 

@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Calendar extends AppCompatActivity implements View.OnClickListener {
 
     private ImageView back;
-    EditText mDateFormat;
+    EditText dateFormat;
     DatePickerDialog.OnDateSetListener onDateSetListener;
 
     @Override
@@ -29,12 +29,13 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener 
         back.setOnClickListener(this);
 
         final java.util.Calendar calendar = java.util.Calendar.getInstance();
+
         int year = calendar.get(java.util.Calendar.YEAR);
         int month = calendar.get(java.util.Calendar.MONTH);
         int day = calendar.get(java.util.Calendar.DAY_OF_MONTH);
 
-        mDateFormat = findViewById(R.id.dateFormat);
-        mDateFormat.setOnClickListener(new View.OnClickListener() {
+        dateFormat = findViewById(R.id.dateFormat);
+        dateFormat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DatePickerDialog datePickerDialog = new DatePickerDialog(
@@ -50,18 +51,17 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener 
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                 month = month+1;
                 String date = dayOfMonth+"/"+month+"/"+year;
-                mDateFormat.setText(date);
+                dateFormat.setText(date);
             }
         };
 
         Button searchFoodHistory= findViewById(R.id.buttonSearchHistory);
+
         searchFoodHistory.setOnClickListener(view -> {
             Intent intent = new Intent(this, ViewHistory.class);
-
-            intent.putExtra("date", mDateFormat.getText().toString());
+            intent.putExtra("date", dateFormat.getText().toString());
             startActivity(intent);
         });
-
 
     }
 

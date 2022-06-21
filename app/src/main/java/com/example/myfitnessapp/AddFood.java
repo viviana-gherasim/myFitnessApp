@@ -20,9 +20,9 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class AddFood extends AppCompatActivity implements View.OnClickListener {
 
-    private Button add;
     private EditText food, brand, barcode, calories, proteins, carbs, fats;
     private ImageView back, scanner;
+    private Button add;
     private DatabaseReference database;
 
     @Override
@@ -30,31 +30,34 @@ public class AddFood extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_food);
 
-        add = (Button) findViewById(R.id.button13);
-        add.setOnClickListener(this);
-
         back = (ImageView) findViewById(R.id.backButton);
         back.setOnClickListener(this);
 
         scanner = (ImageView) findViewById(R.id.imageView);
         scanner.setOnClickListener(this);
 
+        add = (Button) findViewById(R.id.button13);
+        add.setOnClickListener(this);
+
         database = FirebaseDatabase.getInstance("https://my-fitness-app-aa2ef-default-rtdb.europe-west1.firebasedatabase.app").getReference().child("Food");
 
-        food = (EditText) findViewById(R.id.editTextTextFoodName);
-        brand = (EditText) findViewById(R.id.editTextTextFoodName2);
-        barcode = (EditText) findViewById(R.id.editTextNumber12);
-        calories = (EditText) findViewById(R.id.editTextNumber8);
-        proteins = (EditText) findViewById(R.id.editTextNumber9);
-        carbs = (EditText) findViewById(R.id.editTextNumber10);
-        fats = (EditText) findViewById(R.id.editTextNumber11);
+        food = findViewById(R.id.editTextTextFoodName);
+        brand = findViewById(R.id.editTextTextFoodName2);
+        barcode = findViewById(R.id.editTextNumber12);
+        calories = findViewById(R.id.editTextNumber8);
+        proteins = findViewById(R.id.editTextNumber9);
+        carbs = findViewById(R.id.editTextNumber10);
+        fats = findViewById(R.id.editTextNumber11);
 
-        String codBareS;
+        String codBare;
         Bundle bundle = getIntent().getExtras();
+
         if(bundle!=null) {
-            codBareS = bundle.getString("Camera");
-            if(codBareS!=null) {
-                barcode.setText(codBareS);
+
+            codBare = bundle.getString("Camera");
+            if(codBare!=null) {
+
+                barcode.setText(codBare);
             }
         }
     }
@@ -65,11 +68,13 @@ public class AddFood extends AppCompatActivity implements View.OnClickListener {
             case R.id.button13:
                 addFoodToDatabase();
                 break;
-            case R.id.backButton:
-                startActivity(new Intent(this, FoodActivity.class));
-                break;
+
             case R.id.imageView:
                 startActivity(new Intent(this, ScannerActivity.class));
+                break;
+
+            case R.id.backButton:
+                startActivity(new Intent(this, FoodActivity.class));
                 break;
         }
     }
@@ -86,49 +91,49 @@ public class AddFood extends AppCompatActivity implements View.OnClickListener {
 
         if(product.isEmpty())
         {
-            food.setError("Product name missing!");
+            food.setError("Please introduce the name!");
             food.requestFocus();
             return;
         }
 
         if(brandName.isEmpty())
         {
-            brand.setError("Brand name missing!");
+            brand.setError("Please introduce the brand name!");
             brand.requestFocus();
             return;
         }
 
         if(code.isEmpty())
         {
-            barcode.setError("Barcode is required!");
+            barcode.setError("Please introduce the barcode!");
             barcode.requestFocus();
             return;
         }
 
         if(calorii.isEmpty())
         {
-            calories.setError("Calories are missing!");
+            calories.setError("Please introduce the calories!");
             calories.requestFocus();
             return;
         }
 
         if(proteine.isEmpty())
         {
-            proteins.setError("Proteins are required!");
+            proteins.setError("Please introduce the proteins!");
             proteins.requestFocus();
             return;
         }
 
         if(carbo.isEmpty())
         {
-            carbs.setError("Carbs are required!");
+            carbs.setError("Please introduce the carbs!");
             carbs.requestFocus();
             return;
         }
 
         if(grasimi.isEmpty())
         {
-            fats.setError("Fats are required!");
+            fats.setError("Please introduce the fats!");
             fats.requestFocus();
             return;
         }
@@ -140,11 +145,12 @@ public class AddFood extends AppCompatActivity implements View.OnClickListener {
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful())
                 {
-                    Toast.makeText(AddFood.this, "Food inserted successfully into database", Toast.LENGTH_LONG).show();
+                    Toast.makeText(AddFood.this, "Food inserted successfully", Toast.LENGTH_LONG).show();
                     startActivity(new Intent(getApplicationContext(), HomePageActivity.class));
                 }
                 else {
-                    Toast.makeText(AddFood.this, "Insertion food failed", Toast.LENGTH_LONG).show();
+
+                    Toast.makeText(AddFood.this, "Insertion failed", Toast.LENGTH_LONG).show();
                 }
             }
         });

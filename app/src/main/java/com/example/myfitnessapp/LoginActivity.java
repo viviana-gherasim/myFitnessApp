@@ -2,15 +2,15 @@ package com.example.myfitnessapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myfitnessapp.Manager.ManagerActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -29,14 +29,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        login = (TextView) findViewById(R.id.button3);
+        login = findViewById(R.id.button3);
         login.setOnClickListener(this);
 
-        back = (TextView) findViewById(R.id.button4);
+        back = findViewById(R.id.button4);
         back.setOnClickListener(this);
 
-        editTextEmail = (EditText) findViewById(R.id.editTextTextEmailAddress);
-        editTextPassword = (EditText) findViewById(R.id.editTextTextPassword);
+        editTextEmail = findViewById(R.id.editTextTextEmailAddress);
+        editTextPassword = findViewById(R.id.editTextTextPassword);
 
         mAuth = FirebaseAuth.getInstance();
     }
@@ -44,39 +44,47 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+
             case R.id.button3:
-                userLogin();
+                login();
                 break;
+
             case R.id.button4:
                 startActivity(new Intent(this, RegisterActivity.class));
                 break;
         }
     }
 
-    private void userLogin() {
+    private void login()
+    {
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
 
         if(email.isEmpty())
         {
-            editTextEmail.setError("Email is required!");
             editTextEmail.requestFocus();
+            editTextEmail.setError("Please enter email!");
             return;
         }
-        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            editTextEmail.setError("Invalid Email format!");
+
+        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches())
+        {
             editTextEmail.requestFocus();
+            editTextEmail.setError("Invalid email!");
             return;
         }
-        if(password.isEmpty()){
-            editTextPassword.setError("A password is required!");
+
+        if(password.isEmpty())
+        {
             editTextPassword.requestFocus();
+            editTextPassword.setError("Please enter password!");
             return;
         }
+
         if(password.length()<6)
         {
-            editTextPassword.setError("Password is to short!(Min.6 chars)");
             editTextPassword.requestFocus();
+            editTextPassword.setError("Invalid password!(Min.6 chars)");
             return;
         }
 
@@ -92,7 +100,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 }
                 else
                 {
-                    Toast.makeText(LoginActivity.this, "Failed to login! Please check your credentials!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Login failed! Please verify your credentials!", Toast.LENGTH_SHORT).show();
                 }
             }
         });

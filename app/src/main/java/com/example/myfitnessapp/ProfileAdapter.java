@@ -14,10 +14,12 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 
 public class ProfileAdapter  extends ArrayAdapter<User> {
+
     private Context mContext;
     int mRes;
 
     public ProfileAdapter(@NonNull Context context, int res, @NonNull ArrayList<User> obj) {
+
         super(context, res, obj);
         mContext = context;
         mRes = res;
@@ -25,6 +27,7 @@ public class ProfileAdapter  extends ArrayAdapter<User> {
 
     @NonNull
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+
         String email = getItem(position).getEmail();
         Long weight = Long.valueOf(getItem(position).getWeight());
         Long height = Long.valueOf(getItem(position).getHeight());
@@ -36,13 +39,13 @@ public class ProfileAdapter  extends ArrayAdapter<User> {
         LayoutInflater inflater =LayoutInflater.from(mContext);
         convertView=inflater.inflate(mRes,parent,false);
 
-        TextView tEmail = (TextView) convertView.findViewById(R.id.textView18);
-        TextView tWeight = (TextView) convertView.findViewById(R.id.textView21);
-        TextView tHeight = (TextView) convertView.findViewById(R.id.textView20);
-        TextView tTargetWeight = (TextView) convertView.findViewById(R.id.textView22);
-        TextView tDay = (TextView) convertView.findViewById(R.id.textView19);
-        TextView tMonth = (TextView) convertView.findViewById(R.id.textView26);
-        TextView tYear = (TextView) convertView.findViewById(R.id.textView27);
+        TextView tEmail = convertView.findViewById(R.id.textView18);
+        TextView tWeight = convertView.findViewById(R.id.textView21);
+        TextView tHeight = convertView.findViewById(R.id.textView20);
+        TextView tTargetWeight = convertView.findViewById(R.id.textView22);
+        TextView tDay = convertView.findViewById(R.id.textView19);
+        TextView tMonth = convertView.findViewById(R.id.textView26);
+        TextView tYear = convertView.findViewById(R.id.textView27);
 
         tEmail.setText(email);
         tWeight.setText(String.valueOf(weight));

@@ -31,30 +31,32 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
 
-        back = (TextView) findViewById(R.id.button6);
+        back = findViewById(R.id.button6);
         back.setOnClickListener(this);
 
-        signup = (TextView) findViewById(R.id.button5);
+        signup = findViewById(R.id.button5);
         signup.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
 
-        editTextEmail = (EditText) findViewById(R.id.editTextTextEmailAddress2);
-        editTextPassword = (EditText) findViewById(R.id.editTextTextPassword2);
-        editTextWeight = (EditText) findViewById(R.id.editTextNumber2);
-        editTextHeight = (EditText) findViewById(R.id.editTextNumber3);
-        editTextTargetWeight = (EditText) findViewById(R.id.editTextNumber4);
-        daySpinner = (EditText) findViewById(R.id.editTextNumber);
-        monthSpinner = ( EditText) findViewById(R.id.editTextNumber5);
-        yearSpinner = (EditText) findViewById(R.id.editTextNumber6);
+        editTextEmail = findViewById(R.id.editTextTextEmailAddress2);
+        editTextPassword = findViewById(R.id.editTextTextPassword2);
+        editTextWeight = findViewById(R.id.editTextNumber2);
+        editTextHeight = findViewById(R.id.editTextNumber3);
+        editTextTargetWeight = findViewById(R.id.editTextNumber4);
+        daySpinner = findViewById(R.id.editTextNumber);
+        monthSpinner = findViewById(R.id.editTextNumber5);
+        yearSpinner = findViewById(R.id.editTextNumber6);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+
             case R.id.button6:
                 startActivity(new Intent(this, LoginActivity.class));
                 break;
+
             case R.id.button5:
                 registerUser();
                 break;
@@ -72,20 +74,20 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         String year=yearSpinner.getText().toString().trim();
 
         if(email.isEmpty()){
-            editTextEmail.setError("Email is required!");
+            editTextEmail.setError("Please enter email!");
             editTextEmail.requestFocus();
             return;
         }
 
         if(!Patterns.EMAIL_ADDRESS.matcher(email).matches())
         {
-            editTextEmail.setError("Email has a wrong format!");
+            editTextEmail.setError("Invalid email!");
             editTextEmail.requestFocus();
             return;
         }
 
         if(password.isEmpty()){
-            editTextPassword.setError("Password is required!");
+            editTextPassword.setError("Please enter password!");
             editTextPassword.requestFocus();
             return;
         }
@@ -98,33 +100,33 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         }
 
         if(editTextHeight.getText().length() == 0){
-            editTextHeight.setError("Height is required!");
+            editTextHeight.setError("Please enter height!");
             editTextHeight.requestFocus();
             return;
         }
         if(editTextWeight.getText().length() == 0){
-            editTextWeight.setError("Weight is required!");
+            editTextWeight.setError("Please enter weight!");
             editTextWeight.requestFocus();
             return;
         }
         if(editTextTargetWeight.getText().length() == 0){
-            editTextTargetWeight.setError("Target weight is required!");
+            editTextTargetWeight.setError("Please enter target weight!");
             editTextTargetWeight.requestFocus();
             return;
         }
 
         if(day.isEmpty()){
-            daySpinner.setError("Day is required!");
+            daySpinner.setError("Please enter day!!");
             daySpinner.requestFocus();
             return;
         }
         if(month.isEmpty()){
-            monthSpinner.setError("Month is required!");
+            monthSpinner.setError("Please enter month!");
             monthSpinner.requestFocus();
             return;
         }
         if(year.isEmpty()){
-            yearSpinner.setError("Year is required!");
+            yearSpinner.setError("Please enter year!");
             yearSpinner.requestFocus();
             return;
         }
@@ -151,15 +153,17 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                                     }
                                     else
                                     {
-                                        Toast toast=Toast.makeText(RegisterActivity.this, "Failed to register! Try again!", Toast.LENGTH_LONG);;
+                                        Toast toast=Toast.makeText(RegisterActivity.this, "Register failed! Try again!", Toast.LENGTH_LONG);;
                                         toast.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0, 0);
                                         toast.show();
                                     }
                                 }
                             });
-                        }else
+                        }
+                        else
+
                         {
-                            Toast toast=Toast.makeText(RegisterActivity.this, "Failed to register! Try again!", Toast.LENGTH_LONG);;
+                            Toast toast=Toast.makeText(RegisterActivity.this, "Register failed! Try again!", Toast.LENGTH_LONG);;
                             toast.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0, 0);
                             toast.show();
                         }

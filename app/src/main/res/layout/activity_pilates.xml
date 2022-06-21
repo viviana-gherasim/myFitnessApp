@@ -42,13 +42,12 @@
             <TextView
                 android:layout_width="305dp"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
+                android:layout_marginStart="75dp"
                 android:text="How to do this"
                 android:textColor="#686060"
                 android:textStyle="bold"
                 android:textSize="25sp"
-                android:padding="7dp"
-                android:layout_marginLeft="60dp"/>
+                android:padding="7dp"/>
 
 
             <androidx.cardview.widget.CardView

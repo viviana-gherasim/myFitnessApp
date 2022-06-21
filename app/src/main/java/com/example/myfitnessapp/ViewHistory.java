@@ -46,13 +46,13 @@ public class ViewHistory extends AppCompatActivity implements View.OnClickListen
         String month = parts[1];
         String year = parts[2];
 
-        back = (ImageView) findViewById(R.id.backToHomeButtonHistory);
+        back = findViewById(R.id.backToHomeButtonHistory);
         back.setOnClickListener(this);
 
-        target = (TextView) findViewById(R.id.textTargetCaloriiHistory);
-        sum = (TextView) findViewById(R.id.textSumCaloriiHistory);
+        target = findViewById(R.id.textTargetCaloriiHistory);
+        sum = findViewById(R.id.textSumCaloriiHistory);
 
-        foodHistoryList = (ListView) findViewById(R.id.foodHistoryListView);
+        foodHistoryList = findViewById(R.id.foodHistoryListView);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if(user != null) {
@@ -124,9 +124,11 @@ public class ViewHistory extends AppCompatActivity implements View.OnClickListen
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+
             case R.id.backToHomeButtonHistory:
                 startActivity(new Intent(ViewHistory.this, HomePageActivity.class));
                 break;
+
             case R.id.buttonSearchHistory:
                 startActivity(new Intent(ViewHistory.this, ViewHistory.class));
                 break;

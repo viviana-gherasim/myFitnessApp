@@ -16,25 +16,28 @@ public class SearchFoodActivity extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search_food);
 
-        home = (ImageView) findViewById(R.id.backToHome);
+        home = findViewById(R.id.backToHome);
         home.setOnClickListener(this);
 
-        search = (ImageView) findViewById(R.id.search_loupe);
+        search = findViewById(R.id.search_loupe);
         search.setOnClickListener(this);
 
-        scan = (ImageView) findViewById(R.id.scan_code);
+        scan = findViewById(R.id.scan_code);
         scan.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch ((v.getId())) {
+
             case R.id.backToHome:
                 startActivity(new Intent(SearchFoodActivity.this, DiaryActivity.class));
                 break;
+
             case R.id.search_loupe:
                 startActivity(new Intent(SearchFoodActivity.this, SearchFoodName.class));
                 break;
+
             case R.id.scan_code:
                 startActivity(new Intent(SearchFoodActivity.this, SearchFoodBarcode.class));
         }

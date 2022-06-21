@@ -46,9 +46,9 @@
             android:id="@+id/textView29"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="33dp"
-            android:layout_marginBottom="50dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp"
             android:text="Product"
             android:textColor="#000"
             android:textSize="20dp" />
@@ -57,13 +57,13 @@
             android:id="@+id/editTextTextFoodName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="58dp"
-            android:layout_marginBottom="34dp"
+            android:layout_marginStart="59dp"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="34dp"
+            android:layout_toEndOf="@+id/textView29"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name"
-            android:layout_toEndOf="@+id/textView29"/>
+            android:hint="Name" />
 
 
     </RelativeLayout>
@@ -77,9 +77,9 @@
                 android:id="@+id/textView30"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="35dp"
-                android:layout_marginBottom="55dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="55dp"
                 android:text="Brand"
                 android:textColor="#000"
                 android:textSize="20dp" />
@@ -90,10 +90,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="73dp"
                 android:layout_marginBottom="34dp"
+                android:layout_toEndOf="@+id/textView30"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Name"
-                android:layout_toEndOf="@+id/textView30"/>
+                android:hint="Name" />
 
         </RelativeLayout>
 
@@ -105,9 +105,9 @@
                 android:id="@+id/textView31"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="33dp"
-                android:layout_marginBottom="52dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="52dp"
                 android:text="Calories/100g"
                 android:textColor="#000"
                 android:textSize="20dp" />
@@ -118,9 +118,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
                 android:layout_marginBottom="35dp"
+                android:layout_toEndOf="@+id/textView31"
                 android:ems="10"
-                android:inputType="number"
-                android:layout_toEndOf="@+id/textView31"/>
+                android:inputType="number" />
 
         </RelativeLayout>
 
@@ -132,9 +132,9 @@
                 android:id="@+id/textView32"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="33dp"
-                android:layout_marginBottom="58dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="58dp"
                 android:text="Proteins/100g"
                 android:textColor="#000"
                 android:textSize="20dp" />
@@ -145,9 +145,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
                 android:layout_marginBottom="40dp"
+                android:layout_toEndOf="@id/textView32"
                 android:ems="10"
-                android:inputType="number"
-                android:layout_toEndOf="@id/textView32"/>
+                android:inputType="number" />
 
 
         </RelativeLayout>
@@ -161,12 +161,12 @@
                 android:id="@+id/textView33"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="35dp"
-                android:layout_marginBottom="60dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="60dp"
                 android:text="Carbs/100g"
-                android:textSize="20dp"
-                android:textColor="#000"/>
+                android:textColor="#000"
+                android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/editTextNumber10"
@@ -188,12 +188,12 @@
                 android:id="@+id/textView34"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="35dp"
-                android:layout_marginBottom="48dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="48dp"
                 android:text="Fats/100g"
-                android:textSize="20dp"
-                android:textColor="#000"/>
+                android:textColor="#000"
+                android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/editTextNumber11"
@@ -216,12 +216,12 @@
                 android:id="@+id/textView35"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginBottom="80dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="80dp"
                 android:text="Barcode"
                 android:textColor="#000"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <ImageView
                 android:id="@+id/imageView"
@@ -246,7 +246,7 @@
                 android:id="@+id/button13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="160dp"
+                android:layout_marginStart="130dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginBottom="16dp"
                 android:text="ADD" />

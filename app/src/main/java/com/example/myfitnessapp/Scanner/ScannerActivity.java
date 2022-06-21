@@ -3,7 +3,6 @@ package com.example.myfitnessapp.Scanner;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.budiyev.android.codescanner.CodeScanner;
 import com.budiyev.android.codescanner.CodeScannerView;
 import com.budiyev.android.codescanner.DecodeCallback;
+
 import com.example.myfitnessapp.AddFood;
 import com.example.myfitnessapp.R;
 import com.google.zxing.Result;
@@ -53,8 +53,9 @@ public class ScannerActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
-        super.onResume();
         codeScanner.startPreview();
+        super.onResume();
+
     }
 
     @Override

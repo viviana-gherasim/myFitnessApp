@@ -40,20 +40,20 @@ public class SearchFoodBarcode extends AppCompatActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search_food_by_barcode);
 
-        back = (ImageView) findViewById(R.id.back);
+        back = findViewById(R.id.back);
         back.setOnClickListener(this);
 
-        scanner = (ImageView) findViewById(R.id.scan_search_by_barcode);
+        scanner = findViewById(R.id.scan_search_by_barcode);
         scanner.setOnClickListener(this);
 
-        add = (Button) findViewById(R.id.button15);
+        add = findViewById(R.id.button15);
         add.setOnClickListener(this);
 
-        quantity = (EditText) findViewById(R.id.editText2);
+        quantity = findViewById(R.id.editText2);
 
-        barcode = (EditText) findViewById(R.id.editText);
+        barcode = findViewById(R.id.editText);
 
-        category = (Spinner) findViewById(R.id.spinner);
+        category = findViewById(R.id.spinner);
 
         String codBareSmech;
         Bundle bundle=getIntent().getExtras();
@@ -68,12 +68,15 @@ public class SearchFoodBarcode extends AppCompatActivity implements View.OnClick
     @Override
     public void onClick(View v) {
         switch(v.getId()) {
+
             case R.id.back:
                 startActivity(new Intent(this, SearchFoodActivity.class));
                 break;
+
             case R.id.scan_search_by_barcode:
                 startActivity(new Intent(this, ScannerDiaryActivity.class));
                 break;
+
             case R.id.button15:
                 addFoodToDiary();
                 break;
@@ -90,13 +93,13 @@ public class SearchFoodBarcode extends AppCompatActivity implements View.OnClick
         String categorie = category.getSelectedItem().toString().trim();
 
         if(codBare.isEmpty()) {
-            barcode.setError("Barcode is required");
+            barcode.setError("Please scan the barcode!");
             barcode.requestFocus();
             return;
         }
 
         if(cantitate.isEmpty()) {
-            quantity.setError("Quantity in grams is required");
+            quantity.setError("Please enter quantity!");
             quantity.requestFocus();
             return;
         }

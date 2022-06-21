@@ -2,7 +2,9 @@ package com.example.myfitnessapp;
 
 import com.example.myfitnessapp.Manager.Nutritionist;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class Common {
     public static final String KEY_ENABLE_BUTTON_NEXT = "ENABLE_BUTTON_NEXT";
@@ -18,6 +20,10 @@ public class Common {
     public static int step = 0;
     public static int currentTimeSlot;
     public static Calendar currentDate = Calendar.getInstance();
+
+    public static String returnBookDate(Date date) {
+        return date.getDay() + "" + date.getMonth() + "" + date.getYear();
+    }
 
     public static String convertTimeSlotToString(int slot) {
         switch (slot) {

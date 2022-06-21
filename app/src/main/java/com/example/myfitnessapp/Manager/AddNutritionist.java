@@ -52,7 +52,7 @@ public class AddNutritionist extends AppCompatActivity implements View.OnClickLi
             case R.id.buttonAddNutritionist:
                 addNutritionistToDatabase();
             case R.id.backButton:
-                startActivity(new Intent(this, HomePageActivity.class));
+                startActivity(new Intent(this, ManagerActivity.class));
                 break;
         }
     }

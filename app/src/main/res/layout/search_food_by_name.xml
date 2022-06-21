@@ -48,7 +48,7 @@
                 android:id="@+id/textView41"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="39dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="47dp"
                 android:text="Product Name"
                 android:textColor="#000"
@@ -59,7 +59,7 @@
                 android:id="@+id/editTextProductSearch"
                 android:layout_width="152dp"
                 android:layout_height="40dp"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="47dp"
                 android:layout_toEndOf="@+id/textView41" />
 
@@ -74,7 +74,7 @@
                 android:id="@+id/textView42"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="39dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="40dp"
                 android:text="Quantity"
                 android:textColor="#000"
@@ -84,7 +84,7 @@
                 android:id="@+id/editTextQuantityName"
                 android:layout_width="152dp"
                 android:layout_height="40dp"
-                android:layout_marginStart="79dp"
+                android:layout_marginStart="65dp"
                 android:layout_marginTop="38dp"
                 android:layout_toEndOf="@+id/textView42" />
 
@@ -92,7 +92,6 @@
                 android:id="@+id/textView44"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
                 android:layout_marginTop="45dp"
                 android:layout_toEndOf="@+id/editTextQuantityName"
                 android:text="g"
@@ -109,7 +108,7 @@
                 android:id="@+id/textView43"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="39dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="40dp"
                 android:text="Category"
                 android:textColor="#000"
@@ -119,7 +118,7 @@
                 android:id="@+id/spinnerFoodCategory"
                 android:layout_width="152dp"
                 android:layout_height="40dp"
-                android:layout_marginStart="72dp"
+                android:layout_marginStart="60dp"
                 android:layout_marginTop="38dp"
                 android:layout_toEndOf="@+id/textView43"
                 android:entries="@array/array_food_categories" />
@@ -131,7 +130,7 @@
             android:id="@+id/button14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="158dp"
+            android:layout_marginStart="120dp"
             android:layout_marginTop="98dp"
             android:text="Add" />
 
